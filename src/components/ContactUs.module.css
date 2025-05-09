@@ -1,0 +1,97 @@
+.contactSection {
+  padding: 4rem 2rem;
+  background-color: var(--background-color);
+}
+
+.contactContainer {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.title {
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+}
+
+.intro {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: var(--text-color);
+  margin-bottom: 2.5rem;
+  max-width: 650px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contactDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem; /* Space between contact items */
+  margin-bottom: 2.5rem;
+}
+
+.contactItem {
+  background-color: var(--accent-color); /* Light background for each item */
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.07);
+}
+
+.contactType {
+  font-size: 1.3rem;
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.contactLink {
+  font-size: 1.1rem;
+  color: var(--text-color); /* Using text color for better contrast on accent background */
+  text-decoration: none;
+  word-break: break-all; /* Prevent long emails from breaking layout */
+  transition: color 0.3s ease;
+}
+
+.contactLink:hover {
+  color: var(--primary-color);
+  text-decoration: underline;
+}
+
+.availability {
+  font-size: 1rem;
+  color: var(--text-color);
+  margin-top: 1rem;
+}
+
+/* Responsive adjustments */
+@media (min-width: 768px) {
+  .contactDetails {
+    flex-direction: row; /* Arrange items side-by-side on larger screens */
+    justify-content: space-around;
+  }
+  .contactItem {
+    flex-basis: 30%; /* Distribute space among items */
+  }
+}
+
+@media (max-width: 767px) {
+  .contactSection {
+    padding: 3rem 1.5rem;
+  }
+  .title {
+    font-size: 2rem;
+  }
+  .intro {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+  .contactType {
+    font-size: 1.2rem;
+  }
+  .contactLink {
+    font-size: 1rem;
+  }
+} 

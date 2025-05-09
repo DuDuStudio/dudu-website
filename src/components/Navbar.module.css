@@ -1,0 +1,145 @@
+.navbar {
+  background-color: var(--background-color); /* Or perhaps var(--secondary-color) for more contrast */
+  padding: 0.8rem 2rem;
+  position: fixed; /* Fixed at the top */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; /* Ensure it's above other content */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+}
+
+.navContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logoLink {
+  display: inline-block; /* Ensures proper spacing/sizing */
+}
+
+.logo {
+  height: 50px; /* Adjust as needed */
+  width: auto;
+}
+
+.navMenu {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.navItem {
+  margin-left: 1.5rem;
+}
+
+.navLink {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1rem;
+  padding: 0.5rem 0;
+  transition: color 0.3s ease;
+}
+
+.navLink:hover,
+.navLink.active { /* You might want to add an active class later with JS */
+  color: var(--secondary-color); /* Or a slightly darker shade of primary */
+  /* border-bottom: 2px solid var(--secondary-color); */ /* Optional: underline on hover/active */
+}
+
+/* Hamburger Icon Styling */
+.hamburgerIcon {
+  display: none; /* Hidden by default, shown on small screens */
+  flex-direction: column;
+  justify-content: space-around;
+  width: 2rem;
+  height: 1.8rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 10;
+}
+
+.hamburgerIcon:focus {
+  outline: none;
+}
+
+.hamburgerIcon span {
+  width: 1.8rem;
+  height: 0.20rem; /* Slightly thicker lines */
+  background-color: var(--primary-color);
+  border-radius: 10px;
+  transition: all 0.3s linear;
+  position: relative;
+  transform-origin: 1px;
+}
+
+/* Animation for hamburger to X */
+.hamburgerIcon.open span:nth-child(1) {
+  transform: rotate(45deg);
+}
+
+.hamburgerIcon.open span:nth-child(2) {
+  opacity: 0;
+  transform: translateX(20px);
+}
+
+.hamburgerIcon.open span:nth-child(3) {
+  transform: rotate(-45deg);
+}
+
+/* Basic Responsive: Stack nav items on smaller screens */
+@media (max-width: 768px) {
+  .navMenu {
+    display: none; /* Hide desktop menu */
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 65px; /* Adjust based on navbar height */
+    left: 0;
+    width: 100%;
+    background-color: var(--background-color);
+    padding: 1rem 0;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    border-top: 1px solid var(--accent-color);
+  }
+
+  .navMenu.navMenuOpen {
+    display: flex; /* Show mobile menu when open */
+  }
+
+  .navItem {
+    margin-left: 0;
+    margin-bottom: 1rem; /* Spacing for mobile nav items */
+    width: 100%;
+    text-align: center;
+  }
+  .navItem:last-child {
+    margin-bottom: 0;
+  }
+
+  .navLink {
+    padding: 0.8rem 1rem;
+    display: block; /* Make links take full width */
+    width: 100%;
+  }
+
+  .hamburgerIcon {
+    display: flex; /* Show hamburger on small screens */
+  }
+
+  .navbar {
+    padding: 0.5rem 1rem;
+  }
+
+  .logo {
+    height: 40px;
+  }
+} 

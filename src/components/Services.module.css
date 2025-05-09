@@ -1,0 +1,71 @@
+.servicesSection {
+  padding: 4rem 2rem;
+  background-color: var(--accent-color); /* Using accent color for variety */
+}
+
+.servicesContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.title {
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  margin-bottom: 2.5rem;
+  font-weight: 700;
+}
+
+.servicesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Responsive grid */
+  gap: 2rem;
+}
+
+.serviceCard {
+  background-color: var(--background-color);
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.serviceCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+}
+
+.serviceTitle {
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.serviceDescription {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--text-color);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .servicesSection {
+    padding: 3rem 1.5rem;
+  }
+  .title {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+  .servicesGrid {
+    grid-template-columns: 1fr; /* Stack cards on smaller screens */
+    gap: 1.5rem;
+  }
+  .serviceCard {
+    padding: 1.5rem;
+  }
+  .serviceTitle {
+    font-size: 1.3rem;
+  }
+} 

@@ -1,0 +1,50 @@
+:root {
+  --font-family-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+
+  --primary-color: #7B5A5A; /* Dark Brownish Red from DUBU text */
+  --secondary-color: #E8C9C9; /* Pig Pink */
+  --accent-color: #F4E9DD; /* Beige/Cream from pig details */
+  --text-color: #333333; /* Dark gray for general text for readability */
+  --background-color: #FFFCF7; /* Slightly lighter than accent for main background */
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-family-sans-serif);
+  background-color: var(--background-color);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Basic responsive typography */
+html {
+  font-size: 16px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 17px;
+  }
+}
+
+@media (min-width: 1024px) {
+  html {
+    font-size: 18px;
+  }
+}

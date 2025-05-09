@@ -1,0 +1,59 @@
+.heroSection {
+  background-color: var(--accent-color);
+  min-height: 80vh; /* Make hero section take up a good portion of the viewport */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  text-align: center;
+}
+
+.heroContent {
+  max-width: 800px;
+}
+
+.title {
+  font-size: 2.8rem;
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+.subtitle {
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  margin-bottom: 1.5rem;
+  font-weight: 400;
+}
+
+.tagline {
+  font-size: 1.2rem;
+  color: var(--text-color);
+  font-style: italic;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .heroSection {
+    min-height: 70vh;
+    padding: 1.5rem;
+  }
+  .title {
+    font-size: 2.2rem;
+  }
+  .subtitle {
+    font-size: 1.2rem;
+  }
+  .tagline {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 1.8rem;
+  }
+  .subtitle {
+    font-size: 1rem;
+  }
+} 
