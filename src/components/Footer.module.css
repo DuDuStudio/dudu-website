@@ -1,0 +1,259 @@
+/* ============================================
+   Footer Styles
+   ============================================ */
+
+.footer {
+  background: var(--bg-dark);
+  color: var(--text-inverse);
+  padding: var(--space-16) 0 0;
+}
+
+.container {
+  max-width: var(--container-xl);
+  margin: 0 auto;
+  padding: 0 var(--space-6);
+}
+
+/* Footer Grid */
+.footerGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-10);
+  padding-bottom: var(--space-12);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+@media (min-width: 640px) {
+  .footerGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .footerGrid {
+    grid-template-columns: 2fr 1fr 1fr 1.5fr;
+    gap: var(--space-12);
+  }
+}
+
+/* Brand Column */
+.brandColumn {
+  grid-column: 1 / -1;
+}
+
+@media (min-width: 1024px) {
+  .brandColumn {
+    grid-column: auto;
+  }
+}
+
+.logoLink {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-3);
+  text-decoration: none;
+  margin-bottom: var(--space-5);
+}
+
+.logo {
+  height: 48px;
+  width: auto;
+}
+
+.brandText {
+  display: flex;
+  flex-direction: column;
+}
+
+.brandName {
+  font-family: var(--font-display);
+  font-size: var(--text-xl);
+  font-weight: 700;
+  color: var(--text-inverse);
+}
+
+.brandNameZh {
+  font-size: var(--text-sm);
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.brandDescription {
+  font-size: var(--text-base);
+  line-height: var(--leading-relaxed);
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: var(--space-4);
+  max-width: 300px;
+}
+
+.tagline {
+  font-size: var(--text-base);
+  font-weight: 600;
+  color: var(--accent-400);
+  font-style: italic;
+  margin: 0;
+}
+
+/* Column Title */
+.columnTitle {
+  font-size: var(--text-base);
+  font-weight: 700;
+  color: var(--text-inverse);
+  margin-bottom: var(--space-5);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Navigation Column */
+.navList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navList li {
+  margin-bottom: var(--space-3);
+}
+
+.navLink {
+  font-size: var(--text-base);
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+  transition: all var(--transition-fast);
+  display: inline-block;
+}
+
+.navLink:hover {
+  color: var(--primary-400);
+  transform: translateX(4px);
+}
+
+/* Services Column */
+.servicesList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.servicesList li {
+  margin-bottom: var(--space-3);
+}
+
+.serviceLink {
+  font-size: var(--text-base);
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+  transition: all var(--transition-fast);
+  display: inline-block;
+}
+
+.serviceLink:hover {
+  color: var(--primary-400);
+  transform: translateX(4px);
+}
+
+/* Contact Column */
+.contactList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.contactItem {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  font-size: var(--text-base);
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+a.contactItem:hover {
+  color: var(--primary-400);
+}
+
+.contactItem svg {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  color: var(--primary-400);
+}
+
+.contactItem span {
+  word-break: break-all;
+}
+
+/* Footer Bottom */
+.footerBottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-6);
+  padding: var(--space-8) 0;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .footerBottom {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+  }
+}
+
+.copyright {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.copyright p {
+  font-size: var(--text-sm);
+  color: rgba(255, 255, 255, 0.5);
+  margin: 0;
+}
+
+.copyrightZh {
+  font-size: var(--text-xs) !important;
+}
+
+/* Back to Top Button */
+.backToTop {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: var(--radius-lg);
+  color: var(--text-inverse);
+  cursor: pointer;
+  transition: all var(--transition-base);
+}
+
+.backToTop:hover {
+  background: var(--primary-600);
+  border-color: var(--primary-600);
+  transform: translateY(-4px);
+}
+
+.backToTop svg {
+  width: 24px;
+  height: 24px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footer {
+    padding: var(--space-12) 0 0;
+  }
+
+  .footerGrid {
+    gap: var(--space-8);
+  }
+
+  .brandDescription {
+    max-width: none;
+  }
+}
