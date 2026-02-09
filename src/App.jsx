@@ -2,7 +2,9 @@ import Hero from './components/Hero';
 import Navbar from './components/Navbar';
 import AboutUs from './components/AboutUs';
 import Services from './components/Services';
+import Products from './components/Products';
 import ContactUs from './components/ContactUs';
+import LegalBanner from './components/LegalBanner';
 import Footer from './components/Footer';
 
 function App() {
@@ -21,8 +23,12 @@ function App() {
         <Hero />
         <AboutUs />
         <Services />
+        <Products />
         <ContactUs />
       </main>
+
+      {/* Legal Information Banner */}
+      <LegalBanner />
 
       {/* Footer */}
       <Footer />

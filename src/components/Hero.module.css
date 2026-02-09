@@ -10,7 +10,7 @@
   justify-content: center;
   overflow: hidden;
   background: linear-gradient(180deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
-  padding-top: 80px;
+  padding-top: 120px; /* Extra space for SEO header bar */
 }
 
 /* Background Decorations */
@@ -85,6 +85,32 @@
   }
 }
 
+/* Company Brand - Prominent Display */
+.companyBrand {
+  margin-bottom: var(--space-4);
+  animation: fadeInUp 0.5s ease forwards;
+}
+
+.companyName {
+  font-size: var(--text-2xl);
+  font-weight: 800;
+  color: var(--primary-800);
+  margin: 0 0 var(--space-1) 0;
+  letter-spacing: 0.02em;
+}
+
+@media (min-width: 768px) {
+  .companyName {
+    font-size: var(--text-3xl);
+  }
+}
+
+.companyNameEn {
+  font-size: var(--text-base);
+  font-weight: 500;
+  color: var(--text-tertiary);
+}
+
 /* Badge */
 .badge {
   display: inline-flex;
@@ -98,7 +124,8 @@
   font-weight: 500;
   color: var(--primary-700);
   margin-bottom: var(--space-6);
-  animation: fadeInUp 0.6s ease forwards;
+  animation: fadeInUp 0.6s ease 0.05s forwards;
+  opacity: 0;
 }
 
 .badgeDot {
@@ -170,15 +197,85 @@
   }
 }
 
+/* App Description */
+.appDescription {
+  background: linear-gradient(135deg, var(--primary-50) 0%, var(--accent-50) 100%);
+  border: 1px solid var(--primary-100);
+  border-radius: var(--radius-lg);
+  padding: var(--space-4);
+  margin-bottom: var(--space-4);
+  animation: fadeInUp 0.6s ease 0.2s forwards;
+  opacity: 0;
+}
+
+.appDescText {
+  font-size: var(--text-base);
+  color: var(--text-secondary);
+  line-height: var(--leading-relaxed);
+  margin: 0;
+}
+
+.appDescText strong {
+  color: var(--primary-700);
+  font-weight: 600;
+}
+
 /* Tagline */
 .tagline {
   font-size: var(--text-lg);
   font-weight: 600;
   color: var(--primary-600);
   font-style: italic;
-  margin-bottom: var(--space-8);
+  margin-bottom: var(--space-4);
   animation: fadeInUp 0.6s ease 0.25s forwards;
   opacity: 0;
+}
+
+/* Legal Notice - Prominent Privacy Policy Link */
+.legalNotice {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-3);
+  margin-bottom: var(--space-6);
+  animation: fadeInUp 0.6s ease 0.28s forwards;
+  opacity: 0;
+}
+
+@media (min-width: 1024px) {
+  .legalNotice {
+    justify-content: flex-start;
+  }
+}
+
+.privacyLink {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  color: var(--primary-600);
+  text-decoration: none;
+  padding: var(--space-2) var(--space-3);
+  background: var(--primary-50);
+  border: 1px solid var(--primary-200);
+  border-radius: var(--radius-md);
+  transition: all var(--transition-fast);
+}
+
+.privacyLink:hover {
+  background: var(--primary-100);
+  color: var(--primary-700);
+  border-color: var(--primary-300);
+}
+
+.privacyIcon {
+  width: 16px;
+  height: 16px;
+}
+
+.legalDivider {
+  color: var(--neutral-300);
 }
 
 /* CTA Group */

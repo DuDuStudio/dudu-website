@@ -33,12 +33,13 @@ DuDu Technology Ltd. 官方形象網站，採用 React + Vite 技術架構建置
 │   │   ├── logo.png
 │   │   └── react.svg
 │   ├── components/       # React 組件
-│   │   ├── Navbar.jsx / Navbar.module.css      # 導航列
-│   │   ├── Hero.jsx / Hero.module.css          # 首頁區塊
-│   │   ├── AboutUs.jsx / AboutUs.module.css    # 關於我們
-│   │   ├── Services.jsx / Services.module.css  # 服務項目
-│   │   ├── ContactUs.jsx / ContactUs.module.css # 聯絡我們
-│   │   └── Footer.jsx / Footer.module.css      # 頁腳
+    │   │   ├── Navbar.jsx / Navbar.module.css      # 導航列
+    │   │   ├── Hero.jsx / Hero.module.css          # 首頁區塊
+    │   │   ├── AboutUs.jsx / AboutUs.module.css    # 關於我們
+    │   │   ├── Services.jsx / Services.module.css  # 服務項目
+    │   │   ├── Products.jsx / Products.module.css  # 我們的產品
+    │   │   ├── ContactUs.jsx / ContactUs.module.css # 聯絡我們
+    │   │   └── Footer.jsx / Footer.module.css      # 頁腳
 │   ├── App.jsx           # 主應用組件
 │   ├── main.jsx          # 應用入口
 │   └── index.css         # 全域樣式與設計系統
@@ -78,6 +79,18 @@ DuDu Technology Ltd. 官方形象網站，採用 React + Vite 技術架構建置
   - 客製化系統開發
 - 每項服務包含圖標、描述和功能列表
 - 底部 CTA 區塊
+
+### Products（我們的產品）
+- AI 智能產品展示區塊
+- 兩大核心產品：
+  - **AI 甘特圖生成器**：透過自然語言對話生成專業甘特圖
+    - 功能：AI 智能對話生成、關鍵路徑分析 (CPM)、資源分配管理、風險預警分析、智能時程建議、專案模板庫
+    - 連結：https://ganttai.dudustudio.monster
+  - **AI 專案看板**：與甘特圖整合的敏捷看板工具
+    - 功能：甘特圖雙向同步、拖拉排序操作、AI 卡片描述生成、標籤與篩選系統、團隊協作功能、@mention 標記
+    - 連結：https://kanban.dudustudio.monster
+- 產品亮點數據展示
+- 產品整合說明區塊（甘特圖與看板雙向同步）
 
 ### ContactUs（聯絡我們）
 - 聯絡資訊卡片（Email、電話）

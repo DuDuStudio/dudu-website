@@ -52,6 +52,7 @@ function Navbar() {
     { id: 'hero', label: '首頁' },
     { id: 'about', label: '關於我們' },
     { id: 'services', label: '服務項目' },
+    { id: 'products', label: '我們的產品' },
     { id: 'contact', label: '聯絡我們' }
   ];
 
@@ -67,7 +68,6 @@ function Navbar() {
             aria-label="嘟嘟數位科技 - 返回首頁"
           >
             <img src={logo} alt="嘟嘟數位科技 Logo" className={styles.logo} />
-            <span className={styles.logoText}>DuDu Tech</span>
           </a>
 
           {/* Desktop Navigation */}
@@ -83,6 +83,16 @@ function Navbar() {
                 </a>
               </li>
             ))}
+            <li className={styles.navItem}>
+              <a 
+                href="/privacy.html" 
+                className={styles.navLink}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                隱私權政策
+              </a>
+            </li>
           </ul>
 
           {/* CTA Button */}
@@ -130,7 +140,17 @@ function Navbar() {
                 </a>
               </li>
             ))}
-            <li className={styles.mobileNavItem} style={{ animationDelay: '0.4s' }}>
+            <li className={styles.mobileNavItem} style={{ animationDelay: '0.5s' }}>
+              <a 
+                href="/privacy.html" 
+                className={styles.mobileNavLink}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                隱私權政策
+              </a>
+            </li>
+            <li className={styles.mobileNavItem} style={{ animationDelay: '0.6s' }}>
               <a 
                 href="#contact" 
                 onClick={(e) => scrollToSection(e, 'contact')}

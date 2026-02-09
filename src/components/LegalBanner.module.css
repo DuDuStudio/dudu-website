@@ -1,0 +1,115 @@
+/* ============================================
+   Legal Banner Styles
+   ============================================ */
+
+.legalBanner {
+  background: linear-gradient(135deg, var(--primary-50) 0%, var(--accent-50) 100%);
+  border-top: 1px solid var(--primary-100);
+  border-bottom: 1px solid var(--primary-100);
+  padding: var(--space-6) 0;
+}
+
+.container {
+  max-width: var(--container-xl);
+  margin: 0 auto;
+  padding: 0 var(--space-6);
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-4);
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .content {
+    flex-direction: row;
+    justify-content: center;
+    gap: var(--space-8);
+  }
+}
+
+.text {
+  font-size: var(--text-base);
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+.links {
+  display: flex;
+  gap: var(--space-4);
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+@media (min-width: 768px) {
+  .links {
+    gap: var(--space-6);
+  }
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-3) var(--space-5);
+  background: white;
+  border: 2px solid var(--primary-200);
+  border-radius: var(--radius-lg);
+  text-decoration: none;
+  color: var(--primary-700);
+  font-weight: 600;
+  transition: all var(--transition-base);
+  box-shadow: var(--shadow-sm);
+}
+
+.link:hover {
+  background: var(--primary-600);
+  border-color: var(--primary-600);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.linkIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+}
+
+.linkIcon svg {
+  width: 20px;
+  height: 20px;
+}
+
+.linkText {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  line-height: 1.2;
+}
+
+.linkLabel {
+  font-size: var(--text-base);
+}
+
+.linkLabelEn {
+  font-size: var(--text-xs);
+  opacity: 0.7;
+  font-weight: 400;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .link {
+    padding: var(--space-2) var(--space-4);
+  }
+  
+  .linkLabel {
+    font-size: var(--text-sm);
+  }
+}

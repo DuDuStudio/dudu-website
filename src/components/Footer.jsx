@@ -30,7 +30,13 @@ function Footer() {
     { id: 'hero', label: '首頁' },
     { id: 'about', label: '關於我們' },
     { id: 'services', label: '服務項目' },
+    { id: 'products', label: '我們的產品' },
     { id: 'contact', label: '聯絡我們' }
+  ];
+
+  const legalLinks = [
+    { href: '/privacy.html', label: '隱私權政策' },
+    { href: '/terms.html', label: '服務條款' }
   ];
 
   const services = [
@@ -129,6 +135,13 @@ function Footer() {
           <div className={styles.copyright}>
             <p>© {currentYear} DuDu Technology Ltd. All Rights Reserved.</p>
             <p className={styles.copyrightZh}>嘟嘟數位科技有限公司 版權所有</p>
+            <div className={styles.legalLinks}>
+              {legalLinks.map((link, index) => (
+                <a key={index} href={link.href} className={styles.legalLink}>
+                  {link.label}
+                </a>
+              ))}
+            </div>
           </div>
           
           {/* Back to Top Button */}

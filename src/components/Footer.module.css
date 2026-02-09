@@ -217,6 +217,24 @@ a.contactItem:hover {
   font-size: var(--text-xs) !important;
 }
 
+/* Legal Links */
+.legalLinks {
+  display: flex;
+  gap: var(--space-4);
+  margin-top: var(--space-2);
+}
+
+.legalLink {
+  font-size: var(--text-sm);
+  color: rgba(255, 255, 255, 0.5);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+.legalLink:hover {
+  color: var(--primary-400);
+}
+
 /* Back to Top Button */
 .backToTop {
   width: 48px;
