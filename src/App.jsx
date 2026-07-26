@@ -1,38 +1,26 @@
+import Nav from './components/Nav';
 import Hero from './components/Hero';
-import Navbar from './components/Navbar';
-import AboutUs from './components/AboutUs';
-import Services from './components/Services';
-import Products from './components/Products';
-import ContactUs from './components/ContactUs';
-import LegalBanner from './components/LegalBanner';
-import Footer from './components/Footer';
+import Product from './components/Product';
+import About from './components/About';
+import Partners from './components/Partners';
+import SiteFooter from './components/SiteFooter';
+import { useReveal } from './useReveal';
 
 function App() {
+  useReveal();
+
   return (
-    <>
-      {/* Skip to main content for accessibility */}
-      <a href="#main-content" className="sr-only">
-        Skip to main content
-      </a>
-      
-      {/* Navigation */}
-      <Navbar />
-      
-      {/* Main Content */}
+    <div className="island">
+      <a href="#main-content" className="sr-only">跳到主要內容</a>
+      <Nav />
       <main id="main-content">
         <Hero />
-        <AboutUs />
-        <Services />
-        <Products />
-        <ContactUs />
+        <Product />
+        <About />
+        <Partners />
       </main>
-
-      {/* Legal Information Banner */}
-      <LegalBanner />
-
-      {/* Footer */}
-      <Footer />
-    </>
+      <SiteFooter />
+    </div>
   );
 }
 
