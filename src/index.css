@@ -113,7 +113,11 @@ a { color: inherit; }
   color: var(--foreground) !important; background: var(--surface);
 }
 .nav__prod:hover { background: var(--surface-hover); }
-@media (max-width: 680px) { .nav__links a:not(.nav__prod) { display: none; } }
+@media (max-width: 760px) {
+  .nav__in { height: auto; padding-block: .7rem; flex-wrap: wrap; gap: .6rem; }
+  .nav__links { width: 100%; margin-left: 0; gap: .45rem 1rem; flex-wrap: wrap; }
+  .nav__links a { padding-block: .35rem; }
+}
 
 /* ── hero（dot-grid pattern：Galaxy Patterns 類改造，MIT） ── */
 .hero {
@@ -238,4 +242,71 @@ a { color: inherit; }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
   html { scroll-behavior: auto; }
+}
+
+/* Information flow uses the existing MDS tokens and visual language. */
+[id] { scroll-margin-top: 6rem; }
+a:focus-visible, summary:focus-visible { outline: 2px solid var(--brand); outline-offset: 4px; }
+.sr-only:focus-visible { position: fixed; top: 1rem; left: 1rem; z-index: 100; width: auto; height: auto; clip-path: none; padding: .65rem 1rem; background: var(--surface); border-radius: var(--radius); }
+.hero__note { margin-top: 1rem; max-width: 65ch; color: var(--muted-foreground); font-size: .82rem; }
+.section-note { margin-top: 1.5rem; max-width: 80ch; font-size: .85rem; color: var(--muted-foreground); }
+.sect + .sect { border-top: 1px solid var(--border); }
+.sect--compact { padding-block: 2.5rem; }
+.prod--os { margin-top: 1.3rem; }
+.product-flow { margin-top: 1.8rem; padding-top: 1.3rem; border-top: 1px solid var(--border); }
+.product-flow figcaption { color: var(--muted-foreground); font-size: .78rem; }
+.product-flow ol { list-style: none; padding: 0; margin-top: 1rem; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.5rem; }
+.product-flow span { color: var(--brand); font-size: .8rem; display: block; margin-bottom: .35rem; }
+.product-flow strong { font-size: .9rem; font-weight: 600; }
+.product-flow p { margin-top: .3rem; color: var(--muted-foreground); font-size: .82rem; }
+.os-status { margin-top: 1.2rem; padding: 1rem 1.2rem; background: var(--brand-wash); border-radius: var(--radius); font-size: .86rem; }
+.os-status p + p { margin-top: .3rem; }
+.scenarios { margin-top: 2rem; border-block: 1px solid var(--surface-border); }
+.scenarios details + details { border-top: 1px solid var(--surface-border); }
+summary { cursor: pointer; }
+.scenarios summary { padding: 1.15rem .4rem; font-weight: 500; }
+.scenarios summary .mono { color: var(--brand); margin-inline: .4rem 1rem; font-size: .8rem; }
+.scenario-body { padding: 0 .4rem 1.4rem; }
+.scenario-request { font-size: clamp(1rem, 2vw, 1.2rem); font-weight: 500; }
+.scenario-body dl { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; margin-top: 1rem; }
+.scenario-body dt { font-size: .78rem; color: var(--brand); }
+.scenario-body dd { margin-top: .25rem; color: var(--muted-foreground); font-size: .9rem; }
+.steps { margin-top: 2.2rem; padding: 0; list-style: none; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.5rem; }
+.steps li { border-top: 1px solid var(--surface-border); padding-top: 1.1rem; }
+.steps span { color: var(--brand); font-size: .82rem; }
+.steps h3 { font-size: 1rem; margin-top: .5rem; font-weight: 600; }
+.steps p { color: var(--muted-foreground); font-size: .88rem; margin-top: .45rem; }
+.evidence-links { margin-top: 1.5rem; display: flex; gap: .65rem 1.5rem; flex-wrap: wrap; }
+.evidence-links a, .contact-options a { color: var(--brand); font-size: .88rem; text-underline-offset: .22em; }
+.partner-row { display: grid; grid-template-columns: minmax(220px, .8fr) minmax(0, 1.2fr); align-items: center; gap: 2.5rem; margin-top: 2rem; }
+.partner-nameplate { padding-block: .5rem; }
+.partner-nameplate__role { color: var(--brand); font-size: .8rem; margin-bottom: .7rem; }
+.partner-nameplate h3 { font-size: clamp(1.8rem, 4vw, 2.5rem); line-height: 1.2; font-weight: 600; letter-spacing: -.03em; }
+.partner-nameplate h3 + p { margin-top: .5rem; color: var(--muted-foreground); }
+.partner-scope { padding-left: 2.5rem; border-left: 1px solid var(--surface-border); }
+.partner-scope > p { font-size: .9rem; }
+.partner-scope .section-note { margin-top: .65rem; }
+.partner-scope .btn { margin-top: 1.25rem; }
+.faq { margin-top: 2rem; }
+.faq details { border-bottom: 1px solid var(--surface-border); }
+.faq summary { padding-block: 1.15rem; font-weight: 500; }
+.faq details p { color: var(--muted-foreground); padding-bottom: 1.3rem; max-width: 78ch; font-size: .9rem; }
+.contact-options { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.8rem; margin-top: 2rem; }
+.contact-options h3 { font-size: 1rem; font-weight: 600; }
+.contact-options p { margin-block: .65rem 1rem; color: var(--muted-foreground); font-size: .9rem; }
+.contact-options a { display: block; width: fit-content; margin-top: .45rem; overflow-wrap: anywhere; }
+@media (max-width: 680px) {
+  [id] { scroll-margin-top: 9rem; }
+  .product-flow ol, .steps, .contact-options { grid-template-columns: 1fr; gap: 1.3rem; }
+  .scenario-body dl { grid-template-columns: 1fr; gap: .8rem; }
+  .partner-row { grid-template-columns: minmax(0, 1fr); gap: 1.4rem; }
+  .partner-scope { padding-left: 0; padding-top: 1.4rem; border-left: 0; border-top: 1px solid var(--surface-border); }
+  .prod { padding: 1.3rem; }
+  .prod__points, .cols { grid-template-columns: minmax(0, 1fr); }
+  .prod__oss { margin-left: 0; }
+  .nav__links { gap: .4rem .8rem; }
+  .nav__links a { font-size: .78rem; }
+  .hero__in { padding-top: 3rem; }
+  .hero h1 { font-size: clamp(1.7rem, 6vw, 2.2rem); }
+  .hero__cta .btn, .prod__cta .btn { justify-content: center; }
 }

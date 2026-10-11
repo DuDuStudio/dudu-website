@@ -1,43 +1,19 @@
-import { Building2 } from 'lucide-react';
-
-/* 台灣總經銷資訊 — 網址確定後填入即自動顯示導流按鈕。
-   留空期間只顯示說明文字與原廠信箱轉介。 */
-const DISTRIBUTOR_URL = '';
-const DISTRIBUTOR_NAME = '';
-
 const Partners = () => (
-  <section className="sect" id="partners">
-    <p className="sect__tag rv">SALES｜銷售與導入</p>
-    <h2 className="rv">銷售與導入由台灣總經銷服務</h2>
-    <div className="cols">
-      <div className="col rv">
-        <h3><Building2 aria-hidden="true" />企業導入 DuDuClaw</h3>
-        <p>
-          原廠專注研發，不做直售。報價、建置與陪跑輔導由台灣總經銷統籌。
-          {DISTRIBUTOR_URL ? (
-            <>
-              {' '}請直接前往
-              <a href={DISTRIBUTOR_URL} target="_blank" rel="noopener noreferrer">
-                {DISTRIBUTOR_NAME || '總經銷網站'}
-              </a>
-              。
-            </>
-          ) : (
-            <>
-              {' '}來信 <a href="mailto:info@dudustudio.monster">info@dudustudio.monster</a>，
-              我們協助你對接總經銷窗口。
-            </>
-          )}
-        </p>
+  <section className="sect sect--compact" id="partners">
+    <p className="sect__tag rv">PARTNERING WITH｜合作夥伴・台灣總經銷</p>
+    <h2 className="rv">讓產品落地，有夥伴一起做</h2>
+    <div className="partner-row rv">
+      <div className="partner-nameplate">
+        <p className="partner-nameplate__role">台灣正式總經銷</p>
+        <h3>Future Corp</h3>
+        <p>未來企業股份有限公司</p>
+      </div>
+      <div className="partner-scope">
+        <p>企業商業授權、導入建置、教育訓練與支援，由 Future Corp 提供。嘟嘟數位持續負責產品研發與版本演進。</p>
+        <p className="section-note">帶著想交辦的工作、現有系統與資料限制，討論服務範圍。報價、交付時程與支援條件由總經銷確認。</p>
+        <a className="btn btn--brand" href="https://www.futurecorp.tw/" target="_blank" rel="noopener noreferrer">洽詢企業導入 · Future Corp ↗</a>
       </div>
     </div>
-    {DISTRIBUTOR_URL && (
-      <div className="hero__cta rv">
-        <a className="btn btn--brand" href={DISTRIBUTOR_URL} target="_blank" rel="noopener noreferrer">
-          前往總經銷網站
-        </a>
-      </div>
-    )}
   </section>
 );
 
