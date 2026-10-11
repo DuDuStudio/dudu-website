@@ -4,6 +4,9 @@ import Product from './components/Product';
 import About from './components/About';
 import Partners from './components/Partners';
 import SiteFooter from './components/SiteFooter';
+import Workflow from './components/Workflow';
+import Faq from './components/Faq';
+import Contact from './components/Contact';
 import { useReveal } from './useReveal';
 
 function App() {
@@ -16,8 +19,11 @@ function App() {
       <main id="main-content">
         <Hero />
         <Product />
+        <Workflow />
         <About />
         <Partners />
+        <Faq />
+        <Contact />
       </main>
       <SiteFooter />
     </div>

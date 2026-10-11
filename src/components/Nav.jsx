@@ -9,16 +9,17 @@ const Nav = () => (
       </a>
       <nav className="nav__links" aria-label="主選單">
         <a href="#product">產品</a>
-        <a href="#about">公司</a>
-        <a href="#partners">合作</a>
+        <a href="#workflow">怎麼開始</a>
+        <a href="#about">原廠與夥伴</a>
+        <a href="#faq">常見問題</a>
         <a href="#contact">聯絡</a>
         <a
           className="nav__prod"
-          href="https://duduclaw.dudustudio.monster/"
+          href="https://www.futurecorp.tw/"
           target="_blank"
           rel="noopener noreferrer"
         >
-          DuDuClaw <ArrowUpRight size={13} aria-hidden="true" />
+          企業導入 <ArrowUpRight size={13} aria-hidden="true" />
         </a>
       </nav>
     </div>

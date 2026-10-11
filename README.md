@@ -1,193 +1,67 @@
-# 嘟嘟數位科技有限公司 - 官方網站
+# 嘟嘟數位科技有限公司官方網站
 
-DuDu Technology Ltd. 官方形象網站，採用 React + Vite 技術架構建置。
+DuDu Studio 公司官網。介紹原廠、DuDuClaw AI 員工平台與 DuDuClaw OS，讓訪客依目的選擇自行試用、企業導入或原廠技術回饋。
 
-## 專案概述
+## 開發與驗證
 
-這是一個現代化的企業形象網站，具備以下特色：
-
-- **商業美感設計**：採用專業的藍色系配色，搭配漸層效果和微動畫
-- **SEO 優化**：完整的 meta tags、結構化數據（JSON-LD）、sitemap 和 robots.txt
-- **響應式設計**：支援桌面、平板和手機等各種裝置
-- **無障礙設計**：符合 WCAG 標準的可及性設計
-- **高效能**：使用 Vite 建置工具，確保快速載入
-
-## 技術架構
-
-### 前端框架
-- **React 19** - 使用最新版本的 React
-- **Vite 6** - 快速的建置工具
-- **CSS Modules** - 模組化的樣式管理
-
-### 專案結構
-
-```
-/workspace/
-├── public/
-│   ├── logo.png          # 網站 Logo
-│   ├── sitemap.xml       # 網站地圖（SEO）
-│   ├── robots.txt        # 搜尋引擎爬蟲設定
-│   └── vite.svg
-├── src/
-│   ├── assets/           # 靜態資源
-│   │   ├── logo.png
-│   │   └── react.svg
-│   ├── components/       # React 組件
-    │   │   ├── Navbar.jsx / Navbar.module.css      # 導航列
-    │   │   ├── Hero.jsx / Hero.module.css          # 首頁區塊
-    │   │   ├── AboutUs.jsx / AboutUs.module.css    # 關於我們
-    │   │   ├── Services.jsx / Services.module.css  # 服務項目
-    │   │   ├── Products.jsx / Products.module.css  # 我們的產品
-    │   │   ├── ContactUs.jsx / ContactUs.module.css # 聯絡我們
-    │   │   └── Footer.jsx / Footer.module.css      # 頁腳
-│   ├── App.jsx           # 主應用組件
-│   ├── main.jsx          # 應用入口
-│   └── index.css         # 全域樣式與設計系統
-├── index.html            # HTML 模板（含 SEO meta tags）
-├── package.json
-├── vite.config.js
-└── README.md
-```
-
-## 組件說明
-
-### Navbar（導航列）
-- 固定在頁面頂部
-- 支援滾動時背景變化效果
-- 響應式設計，手機版有漢堡選單
-- 平滑滾動到各區塊功能
-
-### Hero（首頁區塊）
-- 吸引人的視覺設計
-- 動態背景裝飾
-- 公司標語展示
-- CTA（行動呼籲）按鈕
-- 統計數據展示
-- 程式碼視覺卡片
-
-### AboutUs（關於我們）
-- 公司故事介紹
-- 核心價值觀展示（追求卓越、品質至上、高效執行、夥伴關係）
-- 視覺化圖標卡片
-
-### Services（服務項目）
-- 五大服務項目展示
-  - 網頁設計開發
-  - APP 設計開發
-  - 系統架設
-  - SEO 優化
-  - 客製化系統開發
-- 每項服務包含圖標、描述和功能列表
-- 底部 CTA 區塊
-
-### Products（我們的產品）
-- AI 智能產品展示區塊
-- 兩大核心產品：
-  - **AI 甘特圖生成器**：透過自然語言對話生成專業甘特圖
-    - 功能：AI 智能對話生成、關鍵路徑分析 (CPM)、資源分配管理、風險預警分析、智能時程建議、專案模板庫
-    - 連結：https://ganttai.dudustudio.monster
-  - **AI 專案看板**：與甘特圖整合的敏捷看板工具
-    - 功能：甘特圖雙向同步、拖拉排序操作、AI 卡片描述生成、標籤與篩選系統、團隊協作功能、@mention 標記
-    - 連結：https://kanban.dudustudio.monster
-- 產品亮點數據展示
-- 產品整合說明區塊（甘特圖與看板雙向同步）
-
-### ContactUs（聯絡我們）
-- 聯絡資訊卡片（Email、電話）
-- 服務時間資訊
-- 快速聯繫特色展示
-
-### Footer（頁腳）
-- 品牌資訊
-- 快速連結
-- 服務項目連結
-- 聯絡資訊
-- 返回頂部按鈕
-
-## SEO 優化項目
-
-### Meta Tags
-- Title、Description、Keywords
-- Open Graph（Facebook 分享）
-- Twitter Card
-- Canonical URL
-
-### 結構化數據（JSON-LD）
-- Organization Schema
-- LocalBusiness Schema
-- WebSite Schema
-- Service Catalog
-
-### 其他 SEO 設定
-- `sitemap.xml` - 網站地圖
-- `robots.txt` - 搜尋引擎爬蟲設定
-- Google Analytics 追蹤碼
-
-## 設計系統
-
-### 色彩配置
-```css
-/* Primary Colors - Deep Blue */
---primary-500: #3b82f6;
---primary-600: #2563eb;
---primary-700: #1d4ed8;
-
-/* Accent Colors - Warm Gold */
---accent-500: #f59e0b;
---accent-600: #d97706;
-
-/* Neutral Colors */
---text-primary: #1e293b;
---text-secondary: #475569;
---bg-primary: #ffffff;
---bg-secondary: #f8fafc;
-```
-
-### 字型
-- 主要字型：Noto Sans TC（繁體中文）
-- 英文字型：Inter
-- 程式碼：Monospace
-
-## 開發指令
-
-```bash
-# 安裝依賴
-npm install
-
-# 啟動開發伺服器
+```sh
+npm ci
 npm run dev
-
-# 建置生產版本
 npm run build
-
-# 預覽生產版本
-npm run preview
-
-# 執行 ESLint 檢查
 npm run lint
+npm run preview
 ```
 
-## 瀏覽器支援
+使用 React 19、Vite 6、lucide-react 與一般全域 CSS；沒有 CSS Modules。`npm run build` 產生 `dist/`。部署與發佈需另行授權。
 
-- Chrome (最新版本)
-- Firefox (最新版本)
-- Safari (最新版本)
-- Edge (最新版本)
+## 實際結構與閱讀順序
 
-## 聯絡資訊
+```text
+src/
+  App.jsx                    # 主頁章節順序與 useReveal
+  main.jsx                   # React 入口與自架字型
+  index.css                  # MDS token、全域／元件與響應式樣式
+  useReveal.js               # 單次入場；支援 reduced motion
+  components/
+    Nav.jsx                  # 保留手機上的全部主要導航
+    Hero.jsx                 # 定位與按目的選擇入口
+    Product.jsx              # 平台／OS 比較、工作流程示意與資料流說明
+    Workflow.jsx             # 可展開的工作情境與三步導入
+    About.jsx                # 原廠／總經銷責任及公開證據
+    Partners.jsx             # 正式合作夥伴名牌與企業導入，導流 Future Corp
+    Faq.jsx                  # 原生 details 常見問題
+    Contact.jsx              # 試用、企業導入、原廠技術回饋的下一步
+    SiteFooter.jsx           # 原廠聯絡、產品、法務
+public/
+  logo.png                   # 品牌標誌
+  privacy.html
+  terms.html
+  duduclaw/privacy/index.html # Google 資料隱私說明
+  robots.txt
+  sitemap.xml
+index.html                   # SEO、Organization JSON-LD 與既有 Analytics
+```
 
-- **公司名稱**：嘟嘟數位科技有限公司（DuDu Technology Ltd.）
-- **業務洽詢**：sales@dudustudio.monster
-- **一般資訊**：info@dudustudio.monster
-- **電話**：0971-753-062
-- **服務時間**：週一至週五 09:00 - 18:00
+## 視覺與內容規則
 
-## 版本資訊
+- 保留原有 MDS 藍／白（及系統深色模式）、OKLCH token、浮島、點陣與卡片。Inter Variable、Geist Mono 由 npm 套件自架；中文沿用系統字型。
+- 參考 [unvibe.site](https://unvibe.site/) 的資訊順序：明確定位 → 產品內容 → 工作流程 → 可查證證據 → FAQ → 下一步，不複製其視覺、推薦、使用量或價格。
+- 正式合作區塊目前只呈現已確認的 Future Corp；文字名牌不是商標。使用到的 AI 廠商與工具不能當成官方合作或推薦背書。
+- 工作流程與情境必須標示「示意」，不可當成實測成果或產品截圖。
+- 平台功能以 [DuDuClaw README](https://github.com/zhixuli0406/DuDuClaw) 與文件為準，避免無根據的通道數、一鍵全整合、固定發版或修補時程承諾。
+- 本地部署不表示資料不出門：雲端 runtime 會傳送提示與必要上下文給所選廠商；外部工具依連線設定傳送資料。
+- OS 必須清楚標示 pre-GA、整碟映像有 QEMU 開機驗證紀錄、安裝器與部分功能仍有未驗證流程、真機尚未驗證；OS 和平台版本分開，以各自 release 文件為準。
+- DuDuClaw 核心為 Apache 2.0，商業擴充另有條件。
+- 台灣商業授權、企業導入、教育訓練與支援導流至正式總經銷 [Future Corp](https://www.futurecorp.tw/)。產品問題／開源貢獻及一般公司聯絡保留 info@dudustudio.monster。
+- 手機不隱藏主要導航；保留鍵盤 focus、原生 details、reduced motion 和跳到主內容連結。這些實作不代表完成全站無障礙認證。
 
-- **版本**：2.0.0
-- **更新日期**：2026-01-26
-- **主要更新**：全面改版設計，加強商業美感與 SEO 優化
+## 品牌與聯絡
 
----
+嘟嘟數位科技有限公司（DuDu Technology Ltd.），DuDuClaw 開發原廠。
 
-© 2024-2026 DuDu Technology Ltd. All Rights Reserved.
+- 原廠信箱：info@dudustudio.monster
+- 電話：0971-753-062
+- LINE：@dudustudio
+- 正式總經銷：https://www.futurecorp.tw/
+
+網站內容調整紀錄見 [CHANGELOG.md](CHANGELOG.md)。
