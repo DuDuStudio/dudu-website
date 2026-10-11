@@ -3,6 +3,7 @@
 ## Unreleased
 
 ### Security
+- Preserve server security headers on static assets and the health response; use relative redirects behind Cloud Run and hide nginx version details. This changes hosting response configuration only, not the accepted public site build.
 - Refresh the existing compatible npm dependency ranges to patched lockfile versions for the static website build and development tools. No framework major version or public product functionality changes.
 
 - 沿用 MDS 視覺，重整官網閱讀路徑：定位、產品、工作情境、導入流程、原廠與夥伴、FAQ、下一步。
