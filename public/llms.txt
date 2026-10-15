@@ -1,0 +1,29 @@
+# 嘟嘟數位科技（DuDu Studio）
+
+> 台灣 AI 軟體原廠，開發兩條產品線：DuDuClaw 本地端 AI 員工平台，與 Vettalon 多模型資安稽核器。
+
+官網: https://www.dudustudio.monster/
+聯絡: info@dudustudio.monster
+
+## 產品線
+
+### DuDuClaw — 本地端 AI 員工平台
+把 AI 變成有職務與權限的員工，從自己的 macOS／Linux／Windows 電腦開始，透過 LINE／Telegram／Slack 等通道交辦與回報，依設定接 MCP 工具與 Odoo 等系統，並有審批與稽核。Apache 2.0 開源核心。
+- 產品: https://duduclaw.dudustudio.monster/
+- 原始碼: https://github.com/zhixuli0406/DuDuClaw
+
+### DuDuClaw OS — 整合平台的 x86-64 Linux 作業系統
+Yocto 映像整合桌面、DuDuClaw 平台、唯讀根目錄與 A/B 更新回退。pre-GA、技術試用：已有 QEMU 開機驗證，真機尚未驗證。
+- 產品: https://os.duduclaw.dudustudio.monster/
+
+### Vettalon — 多模型對抗式程式碼資安稽核
+讓不同家族的 AI 模型分頭找洞、再交叉覆核彼此的發現，壓低誤報。程式碼在使用者機器上分析，不經本廠。開源核心可塞進 CI；企業版加上桌面 App、企業報告與供應鏈獵捕。Apache 2.0 開源核心。
+- 產品: https://vettalon.dudustudio.monster/
+- 原始碼: https://github.com/zhixuli0406/vettalon
+
+## 商業關係
+- DuDuClaw 的企業商業授權、導入與支援由正式總經銷 Future Corp（未來企業股份有限公司，futurecorp.tw）提供。
+- Vettalon 的企業版與商業授權由嘟嘟數位直接提供。
+
+## 內容原則
+原廠研發與總經銷導入分開；對未完成驗證的項目（如 DuDuClaw OS 真機、示意流程）誠實標註，不誇大。
