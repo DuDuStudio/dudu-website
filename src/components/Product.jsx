@@ -9,9 +9,9 @@ const POINTS = [
 
 const Product = () => (
   <section className="sect" id="product">
-    <p className="sect__tag rv">PRODUCTS｜兩種起點</p>
-    <h2 className="rv">已有電腦，或想評估一套專用系統？</h2>
-    <p className="sect__lead rv">平台負責 AI 員工的工作；OS 將平台和桌面環境放進同一套系統。兩者有各自的版本與使用前提。</p>
+    <p className="sect__tag rv">PRODUCTS｜兩條產品線</p>
+    <h2 className="rv">讓 AI 幫你做事，也替你把關</h2>
+    <p className="sect__lead rv">嘟嘟數位做兩條產品線：DuDuClaw 把 AI 變成有職務與權限的員工（平台與 OS）；Vettalon 用多個模型互相覆核，替你的程式碼找出真漏洞。兩者都能從自己的電腦開始。</p>
     <article className="prod rv">
       <div className="prod__head">
         <img src="/logo.png" alt="" width="40" height="44" />
@@ -56,7 +56,26 @@ const Product = () => (
         <a className="btn btn--ghost" href="https://github.com/zhixuli0406/DuDuClaw-OS/releases" target="_blank" rel="noopener noreferrer">查看映像與版本紀錄</a>
       </div>
     </article>
-    <p className="section-note rv">本地部署不等於完全離線。使用雲端 AI runtime 時，提示內容與必要上下文會傳給所選服務廠商；外部工具也依各自連線設定傳送資料。</p>
+    <article className="prod prod--vettalon rv">
+      <div className="prod__head">
+        <div>
+          <h3 className="prod__name">Vettalon</h3>
+          <p className="prod__type">多模型對抗式程式碼資安稽核</p>
+        </div>
+        <span className="prod__oss">Apache 2.0 開源核心</span>
+      </div>
+      <p className="prod__desc">適合在意程式碼安全的開發者與團隊。讓不同家族的 AI 模型分頭找洞、再交叉覆核彼此的發現，壓下誤報，留下值得人看的候選。程式碼在你的機器上分析，不經我們手。開源核心可塞進 CI；企業版加上桌面 App、企業報告與供應鏈獵捕。</p>
+      <ul className="prod__points">
+        <li><Check aria-hidden="true" />多家族 finder／verifier 交叉覆核，壓低誤報</li>
+        <li><Check aria-hidden="true" />碼不離機：預設零網路，模型後端自己挑</li>
+        <li><Check aria-hidden="true" />供應鏈獵捕：稽核相依套件，只送 name@version</li>
+      </ul>
+      <div className="prod__cta">
+        <a className="btn btn--brand" href="https://vettalon.dudustudio.monster/" target="_blank" rel="noopener noreferrer">看 Vettalon 官網</a>
+        <a className="btn btn--ghost" href="https://github.com/zhixuli0406/vettalon" target="_blank" rel="noopener noreferrer">查看原始碼</a>
+      </div>
+    </article>
+    <p className="section-note rv">本地部署不等於完全離線。DuDuClaw 使用雲端 AI runtime 時，提示內容與必要上下文會傳給所選服務廠商。Vettalon 的 AI 審查片段只送到你自己設定的模型；用本機 Ollama 則完全不出機器。</p>
   </section>
 );
 

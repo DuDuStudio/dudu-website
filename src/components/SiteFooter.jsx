@@ -15,8 +15,8 @@ const SiteFooter = () => (
         <span>產品</span>
         <a href="https://duduclaw.dudustudio.monster/" target="_blank" rel="noopener noreferrer">DuDuClaw</a>
         <a href="https://os.duduclaw.dudustudio.monster/" target="_blank" rel="noopener noreferrer">DuDuClaw OS</a>
-        <a href="https://www.futurecorp.tw/" target="_blank" rel="noopener noreferrer">企業導入 · Future Corp</a>
-        <a href="https://github.com/zhixuli0406/DuDuClaw" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="https://vettalon.dudustudio.monster/" target="_blank" rel="noopener noreferrer">Vettalon</a>
+        <a href="https://www.futurecorp.tw/" target="_blank" rel="noopener noreferrer">DuDuClaw 企業導入 · Future Corp</a>
       </div>
       <div className="footer__grp">
         <span>法務</span>
