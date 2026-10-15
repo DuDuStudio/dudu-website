@@ -1,4 +1,4 @@
-# robots.txt for DuDu Technology Ltd. — https://www.dudustudio.monster/
+# robots.txt for Dudu Technology Ltd. — https://www.dudustudio.monster/
 
 User-agent: *
 Allow: /

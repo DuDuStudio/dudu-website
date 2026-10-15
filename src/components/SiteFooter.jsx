@@ -1,15 +1,22 @@
+import BrandMark from './BrandMark';
+
 const SiteFooter = () => (
   <footer className="footer">
     <div className="footer__in">
       <div className="footer__co">
-        <b>嘟嘟數位科技有限公司</b>
-        <p>DuDu Studio · DuDuClaw 開發原廠</p>
+        <BrandMark name="company-mono" size={36} className="footer__mark" />
+        <p className="footer__id">
+          <b>Dudu Technology Ltd.</b>
+          <span>嘟嘟數位科技有限公司 · 統編 94139082</span>
+          <span>DuDuClaw、Vettalon 開發原廠</span>
+        </p>
       </div>
       <div className="footer__grp">
         <span>原廠聯絡</span>
         <a href="mailto:info@dudustudio.monster">info@dudustudio.monster</a>
         <a href="tel:+886971753062" className="mono">0971-753-062</a>
         <a href="https://line.me/R/ti/p/@dudustudio" target="_blank" rel="noopener noreferrer">LINE @dudustudio</a>
+        <a href="https://github.com/zhixuli0406" target="_blank" rel="noopener noreferrer">GitHub</a>
       </div>
       <div className="footer__grp">
         <span>產品</span>
@@ -25,7 +32,7 @@ const SiteFooter = () => (
         <a href="/duduclaw/privacy/">Google 資料隱私</a>
       </div>
       <p className="footer__legal">
-        © {new Date().getFullYear()} 嘟嘟數位科技有限公司 DuDu Technology Ltd. 保留所有權利。
+        © {new Date().getFullYear()} Dudu Technology Ltd. · 嘟嘟數位科技有限公司 · 統編 94139082 · 保留所有權利。
       </p>
     </div>
   </footer>

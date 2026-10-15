@@ -1,9 +1,10 @@
-# 嘟嘟數位科技（DuDu Studio）
+# 嘟嘟數位科技有限公司（Dudu Technology Ltd.）
 
 > 台灣 AI 軟體原廠，開發兩條產品線：DuDuClaw 本地端 AI 員工平台，與 Vettalon 多模型資安稽核器。
 
 官網: https://www.dudustudio.monster/
 聯絡: info@dudustudio.monster
+統一編號: 94139082
 
 ## 產品線
 
@@ -17,13 +18,13 @@ Yocto 映像整合桌面、DuDuClaw 平台、唯讀根目錄與 A/B 更新回退
 - 產品: https://os.duduclaw.dudustudio.monster/
 
 ### Vettalon — 多模型對抗式程式碼資安稽核
-讓不同家族的 AI 模型分頭找洞、再交叉覆核彼此的發現，壓低誤報。程式碼在使用者機器上分析，不經本廠。開源核心可塞進 CI；企業版加上桌面 App、企業報告與供應鏈獵捕。Apache 2.0 開源核心。
+讓不同家族的 AI 模型分頭找洞、再交叉覆核彼此的發現，壓低誤報。預設 quick 模式在使用者機器上執行開源掃描器，不經本廠；deep 模式接雲端模型時，程式碼會送到所選模型廠商，全部改用本機 Ollama 才完全留在本機。開源核心可塞進 CI；企業版加上桌面 App、企業報告與供應鏈獵捕。Apache 2.0 開源核心。
 - 產品: https://vettalon.dudustudio.monster/
 - 原始碼: https://github.com/zhixuli0406/vettalon
 
 ## 商業關係
 - DuDuClaw 的企業商業授權、導入與支援由正式總經銷 Future Corp（未來企業股份有限公司，futurecorp.tw）提供。
-- Vettalon 的企業版與商業授權由嘟嘟數位直接提供。
+- Vettalon 的企業版與商業授權由 Dudu Technology Ltd. 直接提供。
 
 ## 內容原則
 原廠研發與總經銷導入分開；對未完成驗證的項目（如 DuDuClaw OS 真機、示意流程）誠實標註，不誇大。
@@ -37,13 +38,13 @@ DuDuClaw 是可部署在現有電腦上的 AI 員工平台；DuDuClaw OS 則是�
 平台部署在本地，但資料流向取決於設定。使用雲端 AI runtime 時，提示與必要上下文會傳給所選廠商；MCP 與其他外部工具也可能傳送資料。導入前請確認模型服務、工具連線與資料範圍。
 
 ### 授權方式？
-DuDuClaw 與 Vettalon 的開源核心均採 Apache 2.0，可依授權使用與修改。商業擴充、企業版與支援另有條件：DuDuClaw 向總經銷 Future Corp 洽詢，Vettalon 向嘟嘟數位直接洽詢。
+DuDuClaw 與 Vettalon 的開源核心均採 Apache 2.0，可依授權使用與修改。商業擴充、企業版與支援另有條件：DuDuClaw 向總經銷 Future Corp 洽詢，Vettalon 向 Dudu Technology Ltd. 直接洽詢。
 
 ### 接上業務系統後，就會自動完成所有工作嗎？
 仍需要設定系統連線、帳號權限、員工職務與完成條件。AI 產出需要核對；先用範圍明確的工作驗證，再逐步開放工具與操作權限。
 
 ### Vettalon 如何保護我的程式碼？
-Vettalon 的檢測在使用者機器上執行。AI 審查時，程式碼片段只送到使用者自己設定的模型（自己的 CLI 帳號或 API 金鑰）；用本機 Ollama 則完全不出機器。嘟嘟數位不經手、不留存、不轉售。
+Vettalon 的檢測在使用者機器上執行。AI 審查時，程式碼片段只送到使用者自己設定的模型（自己的 CLI 帳號或 API 金鑰）；用本機 Ollama 則完全不出機器。Dudu Technology Ltd. 不經手、不留存、不轉售。
 
 ### 詢價、導入與技術問題應該找誰？
-DuDuClaw 的企業報價、商業授權、建置、教育訓練與支援請洽 Future Corp。Vettalon 的企業版與商業授權洽嘟嘟數位。產品原始碼問題可在 GitHub 提 issue。
+DuDuClaw 的企業報價、商業授權、建置、教育訓練與支援請洽 Future Corp。Vettalon 的企業版與商業授權洽 Dudu Technology Ltd.。產品原始碼問題可在 GitHub 提 issue。

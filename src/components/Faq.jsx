@@ -8,7 +8,7 @@ const QUESTIONS = [
 
 const Faq = () => (
   <section className="sect" id="faq">
-    <p className="sect__tag rv">QUESTIONS｜先釐清再開始</p>
+    <p className="eyebrow rv">先釐清再開始</p>
     <h2 className="rv">你可能想先確認的事</h2>
     <div className="faq rv">
       {QUESTIONS.map(({ question, answer }) => (

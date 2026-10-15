@@ -3,214 +3,152 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>隱私權政策 | 嘟嘟數位科技</title>
+  <title>隱私權政策 | Dudu Technology Ltd.</title>
   <meta name="description" content="嘟嘟數位科技有限公司隱私權政策，說明我們如何收集、使用及保護您的個人資料。">
-  <link rel="icon" type="image/png" href="/logo.png">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <meta name="theme-color" content="#F5F4F0" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0B1E33" media="(prefers-color-scheme: dark)">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
+    :root {
+      color-scheme: light;
+      --navy: #102B48; --silver: #7F858C; --amber: #CC8B2D; --cream: #F5F4F0; --white: #FFFFFF;
+      --bg: var(--cream); --surface: var(--white); --text: var(--navy); --text-muted: #5B6470;
+      --rule: #D4D7D8; --accent: var(--silver); --accent-text: #5B6470; --logo-ink: var(--navy);
+      --link: var(--navy);
+      --font-sans: "Avenir Next", "Nunito Sans", system-ui, -apple-system, "Segoe UI", "PingFang TC", "Noto Sans TC", "Microsoft JhengHei", sans-serif;
+      --gutter: 24px;
     }
-    
+    @media (prefers-color-scheme: dark) {
+      :root {
+        color-scheme: dark;
+        --bg: #0B1E33; --surface: #102B48; --text: #F5F4F0; --text-muted: #B7BDC4;
+        --rule: #24405F; --accent-text: #B7BDC4; --logo-ink: var(--cream); --link: var(--cream);
+      }
+    }
+    @media (max-width: 480px) { :root { --gutter: 16px; } }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; }
     body {
-      font-family: 'Noto Sans TC', sans-serif;
-      line-height: 1.8;
-      color: #334155;
-      background: #f8fafc;
+      font-family: var(--font-sans); font-size: 17px; line-height: 1.75;
+      color: var(--text); background: var(--bg); -webkit-font-smoothing: antialiased;
     }
-    
-    .header {
-      background: linear-gradient(135deg, #1e40af 0%, #1e3a8a 100%);
-      padding: 1rem 2rem;
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    }
-    
-    .header-content {
-      max-width: 1200px;
-      margin: 0 auto;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-    
-    .logo-link {
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-      text-decoration: none;
-      color: white;
-    }
-    
-    .logo-link img {
-      height: 40px;
-      width: auto;
-    }
-    
-    .logo-text {
-      font-size: 1.25rem;
-      font-weight: 600;
-    }
-    
+    :focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+    .wrap { width: 100%; max-width: calc(1120px + 2 * var(--gutter)); margin: 0 auto; padding: 0 var(--gutter); }
+
+    .header { position: sticky; top: 0; z-index: 10; background: var(--bg); border-bottom: 1px solid var(--rule); }
+    .header-content { display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 72px; }
+    .logo-link { display: flex; align-items: center; gap: 12px; text-decoration: none; color: var(--text); min-width: 0; }
+    .logo-link svg { width: 32px; height: 32px; flex-shrink: 0; display: block; }
+    .logo-link .ink { fill: var(--logo-ink); }
+    .logo-text { display: grid; line-height: 1.2; }
+    .logo-text b { font-weight: 600; font-size: 16px; letter-spacing: -0.01em; }
+    .logo-text span { font-size: 12px; color: var(--text-muted); letter-spacing: .04em; }
     .back-link {
-      color: white;
-      text-decoration: none;
-      padding: 0.5rem 1rem;
-      border: 1px solid rgba(255,255,255,0.3);
-      border-radius: 8px;
-      transition: all 0.3s;
+      flex-shrink: 0; display: inline-flex; align-items: center; min-height: 40px;
+      color: var(--text); text-decoration: none; font-size: 15px; font-weight: 600;
+      padding: 8px 14px; border: 1px solid var(--rule); border-radius: 8px;
+      transition: border-color .15s ease-out;
     }
-    
-    .back-link:hover {
-      background: rgba(255,255,255,0.1);
+    .back-link:hover { border-color: var(--text); }
+
+    .hero { padding: 72px 0 40px; }
+    .hero .wrap { max-width: calc(800px + 2 * var(--gutter)); }
+    .hero .wrap > div { border-left: 4px solid var(--accent); padding-left: 24px; }
+    .eyebrow { font-size: 13px; font-weight: 600; letter-spacing: .04em; color: var(--text-muted); }
+    .hero h1 { margin-top: 12px; font-size: 40px; font-weight: 600; line-height: 1.15; letter-spacing: -0.01em; }
+
+    .container { max-width: calc(800px + 2 * var(--gutter)); margin: 0 auto; padding: 0 var(--gutter) 96px; }
+    .content { background: var(--surface); border: 1px solid var(--rule); border-radius: 10px; padding: 48px; }
+    .update-date { color: var(--text-muted); font-size: 14px; margin-bottom: 32px; padding-bottom: 16px; border-bottom: 1px solid var(--rule); }
+    h2 { font-size: 28px; font-weight: 600; line-height: 1.15; letter-spacing: -0.01em; margin: 48px 0 16px; padding-top: 24px; border-top: 1px solid var(--rule); }
+    h2:first-of-type { margin-top: 32px; }
+    h3 { font-size: 20px; font-weight: 600; line-height: 1.15; margin: 28px 0 12px; }
+    p { margin-bottom: 16px; }
+    ul, ol { margin: 16px 0; padding-left: 24px; }
+    li { margin-bottom: 8px; }
+    strong { font-weight: 600; }
+    a { color: var(--link); text-decoration-color: var(--accent); text-underline-offset: .25em; }
+
+    .highlight-box, .warning-box {
+      border: 1px solid var(--rule); border-left: 4px solid var(--accent);
+      padding: 16px 20px; margin: 24px 0; border-radius: 8px;
     }
-    
-    .hero {
-      background: linear-gradient(135deg, #1e40af 0%, #1e3a8a 100%);
-      padding: 4rem 2rem;
-      text-align: center;
-      color: white;
-    }
-    
-    .hero h1 {
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
-    }
-    
-    .hero p {
-      opacity: 0.9;
-      font-size: 1.1rem;
-    }
-    
-    .container {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 3rem 2rem;
-    }
-    
-    .content {
-      background: white;
-      padding: 3rem;
-      border-radius: 16px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-    }
-    
-    .update-date {
-      color: #64748b;
-      font-size: 0.9rem;
-      margin-bottom: 2rem;
-      padding-bottom: 1rem;
-      border-bottom: 1px solid #e2e8f0;
-    }
-    
-    h2 {
-      color: #1e40af;
-      font-size: 1.5rem;
-      margin: 2rem 0 1rem;
-      padding-bottom: 0.5rem;
-      border-bottom: 2px solid #dbeafe;
-    }
-    
-    h2:first-of-type {
-      margin-top: 0;
-    }
-    
-    h3 {
-      color: #334155;
-      font-size: 1.2rem;
-      margin: 1.5rem 0 0.75rem;
-    }
-    
-    p {
-      margin-bottom: 1rem;
-    }
-    
-    ul, ol {
-      margin: 1rem 0;
-      padding-left: 1.5rem;
-    }
-    
-    li {
-      margin-bottom: 0.5rem;
-    }
-    
-    .highlight-box {
-      background: #f0f9ff;
-      border-left: 4px solid #3b82f6;
-      padding: 1rem 1.5rem;
-      margin: 1.5rem 0;
-      border-radius: 0 8px 8px 0;
-    }
-    
-    .contact-info {
-      background: #f8fafc;
-      padding: 1.5rem;
-      border-radius: 12px;
-      margin-top: 2rem;
-    }
-    
-    .contact-info h3 {
-      margin-top: 0;
-    }
-    
-    .contact-info a {
-      color: #2563eb;
-      text-decoration: none;
-    }
-    
-    .contact-info a:hover {
-      text-decoration: underline;
-    }
-    
-    .footer {
-      background: #1e293b;
-      color: #94a3b8;
-      text-align: center;
-      padding: 2rem;
-      margin-top: 3rem;
-    }
-    
-    .footer a {
-      color: #60a5fa;
-      text-decoration: none;
-    }
-    
-    @media (max-width: 768px) {
-      .hero h1 {
-        font-size: 1.75rem;
-      }
-      
-      .content {
-        padding: 1.5rem;
-      }
-      
-      .header-content {
-        flex-direction: column;
-        gap: 1rem;
-      }
+    .warning-box { border-left-color: var(--text); }
+    .highlight-box ul, .warning-box ul { margin-bottom: 0; }
+
+    .contact-info { border-top: 1px solid var(--rule); padding-top: 24px; margin-top: 40px; }
+    .contact-info h3 { margin-top: 0; }
+
+    .table-scroll { overflow-x: auto; margin: 16px 0; }
+    table { width: 100%; border-collapse: collapse; }
+    th, td { border-bottom: 1px solid var(--rule); padding: 12px 16px 12px 0; text-align: left; }
+    th { font-weight: 600; }
+
+    .footer { border-top: 1px solid var(--rule); color: var(--text-muted); font-size: 14px; }
+    .footer .wrap { display: flex; flex-wrap: wrap; align-items: flex-start; justify-content: space-between; gap: 24px; padding-block: 40px; }
+    .footer-co { display: flex; gap: 16px; align-items: flex-start; }
+    .footer-co svg { width: 36px; height: 36px; flex-shrink: 0; color: var(--text-muted); }
+    .footer-co p { margin: 0; display: grid; gap: 2px; }
+    .footer-co b { color: var(--text); font-weight: 600; font-size: 16px; }
+    .footer-links { display: flex; flex-wrap: wrap; gap: 8px 20px; margin: 0; }
+    .footer a { color: var(--text-muted); text-decoration: none; }
+    .footer a:hover { color: var(--text); text-decoration: underline; text-decoration-color: var(--accent); }
+    .footer .copy { width: 100%; border-top: 1px solid var(--rule); padding-top: 20px; margin: 0; font-size: 13px; }
+
+    @media (max-width: 760px) {
+      body { font-size: 16px; }
+      .hero { padding: 48px 0 32px; }
+      .hero .wrap > div { padding-left: 16px; }
+      .hero h1 { font-size: 30px; }
+      .container { padding-bottom: 56px; }
+      .content { padding: 24px 20px; }
+      h2 { font-size: 24px; margin-top: 40px; }
+      h3 { font-size: 18px; }
+      .logo-text span { display: none; }
+      table { font-size: 15px; }
     }
   </style>
 </head>
 <body>
   <header class="header">
-    <div class="header-content">
-      <a href="/" class="logo-link">
-        <img src="/logo.png" alt="嘟嘟數位科技">
-        <span class="logo-text">嘟嘟數位科技</span>
+    <div class="wrap header-content">
+      <a href="/" class="logo-link" aria-label="Dudu Technology Ltd. 嘟嘟數位科技有限公司 首頁">
+        <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="-2.5 15.0 1236.0 1236.0"><g class="ink" fill="#102B48" transform="translate(0.000000,1254.000000) scale(0.100000,-0.100000)"><path d="M2138 11555 c-188 -52 -333 -218 -358 -411 -7 -53 -10 -947 -8 -2734
+3 -2448 4 -2657 20 -2685 22 -41 56 -71 100 -90 78 -32 36 -50 708 302 179 93
+406 212 505 263 99 51 255 133 347 182 92 48 170 88 173 88 3 0 47 23 98 52
+99 56 138 88 431 358 306 283 327 300 351 300 57 0 60 -7 260 -655 149 -483
+197 -631 208 -638 7 -4 215 -113 462 -241 248 -128 506 -262 575 -298 69 -36
+240 -125 380 -198 140 -73 339 -177 442 -231 102 -55 189 -99 192 -99 3 0 101
+-51 218 -113 574 -306 612 -321 736 -286 58 16 150 104 172 164 19 51 28 3378
+10 3556 -31 311 -188 573 -445 745 -58 39 -879 455 -2265 1149 -1196 598
+-2364 1183 -2595 1300 -300 151 -437 215 -479 223 -75 15 -177 14 -238 -3z"/></g><g class="accent" fill="#7F858C" transform="translate(0.000000,1254.000000) scale(0.100000,-0.100000)"><path d="M8556 7552 c-2 -4 -5 -713 -5 -1575 -1 -1088 -5 -1584 -12 -1620 -61
+-289 -351 -495 -646 -458 -131 16 -79 -8 -1223 586 -151 78 -414 215 -585 303
+-911 470 -1229 634 -1315 679 -582 305 -610 316 -775 316 -249 1 -452 -148
+-528 -388 l-22 -70 0 -1250 c0 -1397 -4 -1310 71 -1493 89 -216 223 -354 479
+-490 308 -164 611 -328 1255 -679 151 -82 316 -171 365 -198 50 -26 113 -60
+140 -75 28 -15 140 -76 250 -135 110 -59 229 -125 265 -145 36 -21 106 -59
+155 -85 50 -26 128 -69 175 -95 47 -26 162 -90 255 -140 94 -51 218 -119 277
+-151 236 -130 348 -123 616 37 321 191 734 437 1062 634 190 114 406 243 480
+287 74 43 279 165 455 270 1323 788 1256 747 1326 815 116 115 199 259 241
+418 l23 85 0 1325 c0 1425 1 1383 -52 1555 -51 165 -140 310 -273 448 -119
+125 -211 182 -602 375 -189 93 -682 339 -1095 545 -414 207 -755 373 -757 369z"/></g></svg>
+        <span class="logo-text"><b>Dudu Technology Ltd.</b><span>嘟嘟數位科技有限公司</span></span>
       </a>
       <a href="/" class="back-link">← 返回首頁</a>
     </div>
   </header>
 
   <section class="hero">
-    <h1>隱私權政策</h1>
-    <p>Privacy Policy</p>
+    <div class="wrap"><div>
+      <p class="eyebrow">Privacy Policy</p>
+      <h1>隱私權政策</h1>
+    </div></div>
   </section>
 
   <main class="container">
@@ -317,12 +255,39 @@
   </main>
 
   <footer class="footer">
-    <p>© 2026 嘟嘟數位科技有限公司 版權所有</p>
-    <p style="margin-top: 0.5rem;">
-      <a href="/">首頁</a> ｜ 
-      <a href="/privacy.html">隱私權政策</a> ｜ 
-      <a href="/terms.html">服務條款</a>
-    </p>
+    <div class="wrap">
+      <div class="footer-co">
+        <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="-2.5 15.0 1236.0 1236.0"><g class="ink" fill="currentColor" transform="translate(0.000000,1254.000000) scale(0.100000,-0.100000)"><path d="M2138 11555 c-188 -52 -333 -218 -358 -411 -7 -53 -10 -947 -8 -2734
+3 -2448 4 -2657 20 -2685 22 -41 56 -71 100 -90 78 -32 36 -50 708 302 179 93
+406 212 505 263 99 51 255 133 347 182 92 48 170 88 173 88 3 0 47 23 98 52
+99 56 138 88 431 358 306 283 327 300 351 300 57 0 60 -7 260 -655 149 -483
+197 -631 208 -638 7 -4 215 -113 462 -241 248 -128 506 -262 575 -298 69 -36
+240 -125 380 -198 140 -73 339 -177 442 -231 102 -55 189 -99 192 -99 3 0 101
+-51 218 -113 574 -306 612 -321 736 -286 58 16 150 104 172 164 19 51 28 3378
+10 3556 -31 311 -188 573 -445 745 -58 39 -879 455 -2265 1149 -1196 598
+-2364 1183 -2595 1300 -300 151 -437 215 -479 223 -75 15 -177 14 -238 -3z"/></g><g class="accent" fill="currentColor" transform="translate(0.000000,1254.000000) scale(0.100000,-0.100000)"><path d="M8556 7552 c-2 -4 -5 -713 -5 -1575 -1 -1088 -5 -1584 -12 -1620 -61
+-289 -351 -495 -646 -458 -131 16 -79 -8 -1223 586 -151 78 -414 215 -585 303
+-911 470 -1229 634 -1315 679 -582 305 -610 316 -775 316 -249 1 -452 -148
+-528 -388 l-22 -70 0 -1250 c0 -1397 -4 -1310 71 -1493 89 -216 223 -354 479
+-490 308 -164 611 -328 1255 -679 151 -82 316 -171 365 -198 50 -26 113 -60
+140 -75 28 -15 140 -76 250 -135 110 -59 229 -125 265 -145 36 -21 106 -59
+155 -85 50 -26 128 -69 175 -95 47 -26 162 -90 255 -140 94 -51 218 -119 277
+-151 236 -130 348 -123 616 37 321 191 734 437 1062 634 190 114 406 243 480
+287 74 43 279 165 455 270 1323 788 1256 747 1326 815 116 115 199 259 241
+418 l23 85 0 1325 c0 1425 1 1383 -52 1555 -51 165 -140 310 -273 448 -119
+125 -211 182 -602 375 -189 93 -682 339 -1095 545 -414 207 -755 373 -757 369z"/></g></svg>
+        <p><b>Dudu Technology Ltd.</b><span>嘟嘟數位科技有限公司 · 統編 94139082</span></p>
+      </div>
+      <p class="footer-links">
+        <a href="/">首頁</a>
+        <a href="https://duduclaw.dudustudio.monster/">DuDuClaw</a>
+        <a href="https://vettalon.dudustudio.monster/">Vettalon</a>
+        <a href="https://github.com/zhixuli0406">GitHub</a>
+        <a href="/privacy.html">隱私權政策</a>
+        <a href="/terms.html">服務條款</a>
+      </p>
+      <p class="copy">© 2026 Dudu Technology Ltd. · 嘟嘟數位科技有限公司 版權所有</p>
+    </div>
   </footer>
 </body>
 </html>

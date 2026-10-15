@@ -13,7 +13,7 @@ function App() {
   useReveal();
 
   return (
-    <div className="island">
+    <div className="site">
       <a href="#main-content" className="sr-only">跳到主要內容</a>
       <Nav />
       <main id="main-content">

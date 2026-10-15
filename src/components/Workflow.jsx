@@ -6,7 +6,7 @@ const SCENARIOS = [
 
 const Workflow = () => (
   <section className="sect" id="workflow">
-    <p className="sect__tag rv">START WITH A TASK｜從一件工作開始</p>
+    <p className="eyebrow rv">從一件工作開始</p>
     <h2 className="rv">先想好交辦什麼，再決定接哪些工具</h2>
     <p className="sect__lead rv">以下是工作情境示意，並非實測成果。展開一個情境，看看除了交辦文字，還需要準備什麼。</p>
     <div className="scenarios rv">
@@ -26,8 +26,8 @@ const Workflow = () => (
       <li><span className="mono">03</span><h3>檢查結果，再擴大範圍</h3><p>以實際資料測試，核對輸出與紀錄，再討論團隊導入。</p></li>
     </ol>
     <div className="hero__cta rv">
-      <a className="btn btn--ghost" href="https://duduclaw.dudustudio.monster/" target="_blank" rel="noopener noreferrer">前往產品站開始試用</a>
-      <a className="btn btn--ghost" href="#partners">需要導入協助</a>
+      <a className="btn btn--secondary" href="https://duduclaw.dudustudio.monster/" target="_blank" rel="noopener noreferrer">前往產品站開始試用</a>
+      <a className="btn btn--secondary" href="#partners">需要導入協助</a>
     </div>
   </section>
 );
