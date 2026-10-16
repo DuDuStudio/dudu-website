@@ -9,6 +9,7 @@
 - 新的 1200×630 og:image（og.png），Twitter 卡片改為 summary_large_image；JSON-LD 補上 legalName、taxID 與英文名稱。
 
 ### Fixed
+- 修正兩條產品線的銷售管道說法前後矛盾：首頁「原廠不直售」沒有限定產品，但 meta 描述與 llms.txt 寫 Vettalon 企業版由本廠直接提供。現在寫明 DuDuClaw 由總經銷 Future Corp 提供商業授權與導入、原廠不直售，Vettalon 企業版與商業授權由 Dudu Technology Ltd. 直接提供（關於、合作夥伴、聯絡、FAQ）；頁面 FAQ 與 llms-full.txt 逐題一致，新增 Vettalon 資料保護一題；JSON-LD 不再把 DuDuClaw 列為本公司直接提供的商品，改標由 Future Corp 提供。
 - 修正 Vettalon 的資料流向說明：原本寫「碼不離機」「程式碼在你的機器上分析」，實際上 deep 模式接雲端模型時程式碼會送到該模型廠商（首頁、llms.txt、llms-full.txt）。
 
 ### Removed
