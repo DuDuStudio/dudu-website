@@ -4,7 +4,7 @@ const SiteFooter = () => (
   <footer className="footer">
     <div className="footer__in">
       <div className="footer__co">
-        <BrandMark name="company-mono" size={36} className="footer__mark" />
+        <BrandMark name="company" size={36} className="footer__mark" />
         <p className="footer__id">
           <b>Dudu Technology Ltd.</b>
           <span>嘟嘟數位科技有限公司 · 統編 94139082</span>
