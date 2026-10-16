@@ -5,9 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>服務條款 | Dudu Technology Ltd.</title>
   <meta name="description" content="嘟嘟數位科技有限公司服務條款，規範您使用我們服務的相關權利與義務。">
-  <link rel="icon" href="/favicon.ico" sizes="any">
-  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="icon" href="/favicon.ico?v=c1-color-20261016" sizes="any">
+  <link rel="icon" href="/favicon-32.png?v=c1-color-20261016" type="image/png" sizes="32x32">
+  <link rel="icon" href="/favicon-48.png?v=c1-color-20261016" type="image/png" sizes="48x48">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png?v=c1-color-20261016">
   <meta name="theme-color" content="#F5F4F0" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#0B1E33" media="(prefers-color-scheme: dark)">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,7 +19,7 @@
       color-scheme: light;
       --navy: #102B48; --silver: #7F858C; --amber: #CC8B2D; --cream: #F5F4F0; --white: #FFFFFF;
       --bg: var(--cream); --surface: var(--white); --text: var(--navy); --text-muted: #5B6470;
-      --rule: #D4D7D8; --accent: var(--silver); --accent-text: #5B6470; --logo-ink: var(--navy);
+      --rule: #D4D7D8; --accent: var(--silver); --accent-text: #5B6470;
       --link: var(--navy);
       --font-sans: "Avenir Next", "Nunito Sans", system-ui, -apple-system, "Segoe UI", "PingFang TC", "Noto Sans TC", "Microsoft JhengHei", sans-serif;
       --gutter: 24px;
@@ -27,7 +28,7 @@
       :root {
         color-scheme: dark;
         --bg: #0B1E33; --surface: #102B48; --text: #F5F4F0; --text-muted: #B7BDC4;
-        --rule: #24405F; --accent-text: #B7BDC4; --logo-ink: var(--cream); --link: var(--cream);
+        --rule: #24405F; --accent-text: #B7BDC4; --link: var(--cream);
       }
     }
     @media (max-width: 480px) { :root { --gutter: 16px; } }
@@ -44,8 +45,8 @@
     .header { position: sticky; top: 0; z-index: 10; background: var(--bg); border-bottom: 1px solid var(--rule); }
     .header-content { display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 72px; }
     .logo-link { display: flex; align-items: center; gap: 12px; text-decoration: none; color: var(--text); min-width: 0; }
-    .logo-link svg { width: 32px; height: 32px; flex-shrink: 0; display: block; }
-    .logo-link .ink { fill: var(--logo-ink); }
+    .logo-link .brand-mark { width: 32px; height: 32px; flex-shrink: 0; display: block; }
+    .brand-mark img { width: 100%; height: 100%; display: block; object-fit: contain; }
     .logo-text { display: grid; line-height: 1.2; }
     .logo-text b { font-weight: 600; font-size: 16px; letter-spacing: -0.01em; }
     .logo-text span { font-size: 12px; color: var(--text-muted); letter-spacing: .04em; }
@@ -93,7 +94,7 @@
     .footer { border-top: 1px solid var(--rule); color: var(--text-muted); font-size: 14px; }
     .footer .wrap { display: flex; flex-wrap: wrap; align-items: flex-start; justify-content: space-between; gap: 24px; padding-block: 40px; }
     .footer-co { display: flex; gap: 16px; align-items: flex-start; }
-    .footer-co svg { width: 36px; height: 36px; flex-shrink: 0; color: var(--text-muted); }
+    .footer-co .brand-mark { width: 36px; height: 36px; flex-shrink: 0; }
     .footer-co p { margin: 0; display: grid; gap: 2px; }
     .footer-co b { color: var(--text); font-weight: 600; font-size: 16px; }
     .footer-links { display: flex; flex-wrap: wrap; gap: 8px 20px; margin: 0; }
@@ -119,25 +120,7 @@
   <header class="header">
     <div class="wrap header-content">
       <a href="/" class="logo-link" aria-label="Dudu Technology Ltd. 嘟嘟數位科技有限公司 首頁">
-        <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="-2.5 15.0 1236.0 1236.0"><g class="ink" fill="#102B48" transform="translate(0.000000,1254.000000) scale(0.100000,-0.100000)"><path d="M2138 11555 c-188 -52 -333 -218 -358 -411 -7 -53 -10 -947 -8 -2734
-3 -2448 4 -2657 20 -2685 22 -41 56 -71 100 -90 78 -32 36 -50 708 302 179 93
-406 212 505 263 99 51 255 133 347 182 92 48 170 88 173 88 3 0 47 23 98 52
-99 56 138 88 431 358 306 283 327 300 351 300 57 0 60 -7 260 -655 149 -483
-197 -631 208 -638 7 -4 215 -113 462 -241 248 -128 506 -262 575 -298 69 -36
-240 -125 380 -198 140 -73 339 -177 442 -231 102 -55 189 -99 192 -99 3 0 101
--51 218 -113 574 -306 612 -321 736 -286 58 16 150 104 172 164 19 51 28 3378
-10 3556 -31 311 -188 573 -445 745 -58 39 -879 455 -2265 1149 -1196 598
--2364 1183 -2595 1300 -300 151 -437 215 -479 223 -75 15 -177 14 -238 -3z"/></g><g class="accent" fill="#7F858C" transform="translate(0.000000,1254.000000) scale(0.100000,-0.100000)"><path d="M8556 7552 c-2 -4 -5 -713 -5 -1575 -1 -1088 -5 -1584 -12 -1620 -61
--289 -351 -495 -646 -458 -131 16 -79 -8 -1223 586 -151 78 -414 215 -585 303
--911 470 -1229 634 -1315 679 -582 305 -610 316 -775 316 -249 1 -452 -148
--528 -388 l-22 -70 0 -1250 c0 -1397 -4 -1310 71 -1493 89 -216 223 -354 479
--490 308 -164 611 -328 1255 -679 151 -82 316 -171 365 -198 50 -26 113 -60
-140 -75 28 -15 140 -76 250 -135 110 -59 229 -125 265 -145 36 -21 106 -59
-155 -85 50 -26 128 -69 175 -95 47 -26 162 -90 255 -140 94 -51 218 -119 277
--151 236 -130 348 -123 616 37 321 191 734 437 1062 634 190 114 406 243 480
-287 74 43 279 165 455 270 1323 788 1256 747 1326 815 116 115 199 259 241
-418 l23 85 0 1325 c0 1425 1 1383 -52 1555 -51 165 -140 310 -273 448 -119
-125 -211 182 -602 375 -189 93 -682 339 -1095 545 -414 207 -755 373 -757 369z"/></g></svg>
+        <picture class="brand-mark"><img src="/brand/company-mark.png" alt="" width="32" height="32"></picture>
         <span class="logo-text"><b>Dudu Technology Ltd.</b><span>嘟嘟數位科技有限公司</span></span>
       </a>
       <a href="/" class="back-link">← 返回首頁</a>
@@ -328,25 +311,7 @@
   <footer class="footer">
     <div class="wrap">
       <div class="footer-co">
-        <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="-2.5 15.0 1236.0 1236.0"><g class="ink" fill="currentColor" transform="translate(0.000000,1254.000000) scale(0.100000,-0.100000)"><path d="M2138 11555 c-188 -52 -333 -218 -358 -411 -7 -53 -10 -947 -8 -2734
-3 -2448 4 -2657 20 -2685 22 -41 56 -71 100 -90 78 -32 36 -50 708 302 179 93
-406 212 505 263 99 51 255 133 347 182 92 48 170 88 173 88 3 0 47 23 98 52
-99 56 138 88 431 358 306 283 327 300 351 300 57 0 60 -7 260 -655 149 -483
-197 -631 208 -638 7 -4 215 -113 462 -241 248 -128 506 -262 575 -298 69 -36
-240 -125 380 -198 140 -73 339 -177 442 -231 102 -55 189 -99 192 -99 3 0 101
--51 218 -113 574 -306 612 -321 736 -286 58 16 150 104 172 164 19 51 28 3378
-10 3556 -31 311 -188 573 -445 745 -58 39 -879 455 -2265 1149 -1196 598
--2364 1183 -2595 1300 -300 151 -437 215 -479 223 -75 15 -177 14 -238 -3z"/></g><g class="accent" fill="currentColor" transform="translate(0.000000,1254.000000) scale(0.100000,-0.100000)"><path d="M8556 7552 c-2 -4 -5 -713 -5 -1575 -1 -1088 -5 -1584 -12 -1620 -61
--289 -351 -495 -646 -458 -131 16 -79 -8 -1223 586 -151 78 -414 215 -585 303
--911 470 -1229 634 -1315 679 -582 305 -610 316 -775 316 -249 1 -452 -148
--528 -388 l-22 -70 0 -1250 c0 -1397 -4 -1310 71 -1493 89 -216 223 -354 479
--490 308 -164 611 -328 1255 -679 151 -82 316 -171 365 -198 50 -26 113 -60
-140 -75 28 -15 140 -76 250 -135 110 -59 229 -125 265 -145 36 -21 106 -59
-155 -85 50 -26 128 -69 175 -95 47 -26 162 -90 255 -140 94 -51 218 -119 277
--151 236 -130 348 -123 616 37 321 191 734 437 1062 634 190 114 406 243 480
-287 74 43 279 165 455 270 1323 788 1256 747 1326 815 116 115 199 259 241
-418 l23 85 0 1325 c0 1425 1 1383 -52 1555 -51 165 -140 310 -273 448 -119
-125 -211 182 -602 375 -189 93 -682 339 -1095 545 -414 207 -755 373 -757 369z"/></g></svg>
+        <picture class="brand-mark"><img src="/brand/company-mark.png" alt="" width="36" height="36"></picture>
         <p><b>Dudu Technology Ltd.</b><span>嘟嘟數位科技有限公司 · 統編 94139082</span></p>
       </div>
       <p class="footer-links">
