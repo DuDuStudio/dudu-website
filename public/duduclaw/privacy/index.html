@@ -24,17 +24,21 @@
          font-size: 17px; line-height: 1.75; color: var(--text); background: var(--bg);
          -webkit-font-smoothing: antialiased; overflow-wrap: anywhere; }
   @media (max-width: 480px) { body { padding: 40px 16px 56px; font-size: 16px; } }
-  h1 { font-size: 30px; font-weight: 600; line-height: 1.15; letter-spacing: -0.01em;
+  h1, .en h2 { font-size: 30px; font-weight: 600; line-height: 1.15; letter-spacing: -0.01em;
        border-left: 4px solid var(--accent); padding-left: 16px; margin: 0 0 8px; }
-  h2 { font-size: 20px; font-weight: 600; line-height: 1.15; margin-top: 40px; }
+  h2, .en h3 { font-size: 20px; font-weight: 600; line-height: 1.15; margin-top: 40px; }
   strong { font-weight: 600; }
   .meta { color: var(--muted); font-size: 14px; }
   .en { margin-top: 64px; border-top: 1px solid var(--rule); padding-top: 40px; }
   a { color: var(--accent-text); text-underline-offset: .2em; }
   :focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  .skip-link { position: absolute; left: 16px; top: -80px; padding: 8px 12px; background: var(--bg); }
+  .skip-link:focus { top: 8px; }
 </style>
 </head>
 <body>
+<a class="skip-link" href="#main">跳到主要內容</a>
+<main id="main">
 <h1>DuDuClaw 隱私權政策</h1>
 <p class="meta">最後更新：2026-07-26</p>
 
@@ -66,19 +70,19 @@
 <p>Dudu Technology Ltd.　<a href="mailto:info@dudustudio.monster">info@dudustudio.monster</a></p>
 
 <div class="en">
-<h1>DuDuClaw Privacy Policy</h1>
+<h2>DuDuClaw Privacy Policy</h2>
 <p class="meta">Last updated: 2026-07-26</p>
 
 <p>DuDuClaw is a locally-installed AI staff platform developed by Dudu Technology Ltd. This policy explains how DuDuClaw handles Google data you authorize it to access.</p>
 
-<h2>Google data we access</h2>
+<h3>Google data we access</h3>
 <ul>
   <li><strong>Google Calendar</strong> (calendar.events): read upcoming events and create events (including Google Meet links) at your request.</li>
   <li><strong>Google Sheets</strong> (spreadsheets): read ranges you specify and append rows at your request.</li>
   <li><strong>Email address</strong> (userinfo.email): shown in the dashboard so you can confirm which account is connected.</li>
 </ul>
 
-<h2>How data is processed and stored</h2>
+<h3>How data is processed and stored</h3>
 <ul>
   <li>DuDuClaw runs on your own computer. All Google data is read and processed locally on your device.</li>
   <li>OAuth tokens are stored on your device, encrypted with AES-256. They are never uploaded to Dudu Technology Ltd. or any third party.</li>
@@ -86,14 +90,15 @@
   <li>You can revoke access at any time via "Disconnect" in the DuDuClaw dashboard (locally stored tokens are deleted immediately) or from your Google Account's Security &rarr; Third-party access page.</li>
 </ul>
 
-<h2>AI features and data use</h2>
+<h3>AI features and data use</h3>
 <p>When you ask your AI staff to perform a task (e.g. "check tomorrow's schedule"), the Google data needed for that task is sent as context to the AI provider you configured yourself (e.g. Anthropic Claude). Only what the task requires is sent, and it is not used for model training.</p>
 
-<h2>Limited Use disclosure</h2>
+<h3>Limited Use disclosure</h3>
 <p>DuDuClaw's use and transfer of information received from Google APIs adheres to the <a href="https://developers.google.com/terms/api-services-user-data-policy" rel="noopener">Google API Services User Data Policy</a>, including the Limited Use requirements. We do not sell Google user data, use it for advertising, or transfer it to third parties except as required by law.</p>
 
-<h2>Contact</h2>
+<h3>Contact</h3>
 <p>Dudu Technology Ltd. &mdash; <a href="mailto:info@dudustudio.monster">info@dudustudio.monster</a></p>
 </div>
+</main>
 </body>
 </html>
