@@ -39,6 +39,9 @@
       color: var(--text); background: var(--bg); -webkit-font-smoothing: antialiased;
     }
     :focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+    .skip-link { position: absolute; left: 16px; top: -80px; z-index: 20; padding: 8px 12px; background: var(--surface); }
+    .skip-link:focus { top: 8px; }
+    main { scroll-margin-top: 80px; }
     .wrap { width: 100%; max-width: calc(1120px + 2 * var(--gutter)); margin: 0 auto; padding: 0 var(--gutter); }
 
     .header { position: sticky; top: 0; z-index: 10; background: var(--bg); border-bottom: 1px solid var(--rule); }
@@ -116,6 +119,7 @@
   </style>
 </head>
 <body>
+  <a class="skip-link" href="#main">跳到主要內容</a>
   <header class="header">
     <div class="wrap header-content">
       <a href="/" class="logo-link" aria-label="Dudu Technology Ltd. 嘟嘟數位科技有限公司 首頁">
@@ -144,6 +148,7 @@
     </div>
   </header>
 
+  <main id="main" tabindex="-1">
   <section class="hero">
     <div class="wrap"><div>
       <p class="eyebrow">Privacy Policy</p>
@@ -151,7 +156,7 @@
     </div></div>
   </section>
 
-  <main class="container">
+  <div class="container">
     <article class="content">
       <p class="update-date">最後更新日期：2026 年 1 月 26 日</p>
       
@@ -252,6 +257,7 @@
         </p>
       </div>
     </article>
+  </div>
   </main>
 
   <footer class="footer">
