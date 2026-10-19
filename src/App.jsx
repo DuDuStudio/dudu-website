@@ -2,7 +2,6 @@ import Nav from './components/Nav';
 import Hero from './components/Hero';
 import Product from './components/Product';
 import About from './components/About';
-import Partners from './components/Partners';
 import SiteFooter from './components/SiteFooter';
 import Workflow from './components/Workflow';
 import Faq from './components/Faq';
@@ -16,12 +15,12 @@ function App() {
     <div className="site">
       <a href="#main-content" className="sr-only">跳到主要內容</a>
       <Nav />
-      <main id="main-content">
+      <main id="main-content" tabIndex={-1}>
         <Hero />
         <Product />
         <Workflow />
         <About />
-        <Partners />
+
         <Faq />
         <Contact />
       </main>
