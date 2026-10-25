@@ -40,61 +40,83 @@
 <a class="skip-link" href="#main">跳到主要內容</a>
 <main id="main" tabindex="-1">
 <h1>DuDuClaw 隱私權政策</h1>
-<p class="meta">最後更新：2026-07-26</p>
+<p class="meta">最後更新：2026-10-26</p>
 
 <p>DuDuClaw 是Dudu Technology Ltd.（嘟嘟數位科技有限公司）開發的本地端 AI 員工平台。本政策說明 DuDuClaw 如何處理你授權存取的 Google 資料。</p>
 
 <h2>我們取用哪些 Google 資料</h2>
 <p>當你在 DuDuClaw 儀表板連接 Google 帳戶時，依你授權的範圍，DuDuClaw 可存取：</p>
 <ul>
+  <li><strong>Gmail</strong>（gmail.readonly、gmail.compose）：搜尋與讀取郵件內容，並依你的指示建立草稿。DuDuClaw 內建工具不會直接寄送郵件，但 Google 的 <code>gmail.compose</code> 權限本身包含寄送能力。</li>
   <li><strong>Google 日曆</strong>（calendar.events）：讀取近期行程、依你的指示建立行程（含 Google Meet 會議連結）。</li>
   <li><strong>Google 試算表</strong>（spreadsheets）：讀取你指定的試算表範圍、依你的指示新增資料列。</li>
+  <li><strong>Google 雲端硬碟</strong>（drive.readonly）：搜尋及讀取或匯出檔案內容；此權限不允許建立、修改或刪除雲端硬碟檔案。</li>
+  <li><strong>Google 文件</strong>（documents）：讀取文件內容，並依你的指示在文件結尾附加文字。</li>
+  <li><strong>Google 簡報</strong>（presentations.readonly）：唯讀存取簡報中的文字內容。</li>
+  <li><strong>Google 表單</strong>（forms.body.readonly、forms.responses.readonly）：唯讀存取表單題目結構與既有回覆。</li>
+  <li><strong>Google Tasks</strong>（tasks）：讀取與建立待辦事項，並依你的指示標記完成。</li>
   <li><strong>電子郵件地址</strong>（userinfo.email）：在儀表板顯示目前連接的帳戶。</li>
 </ul>
 
 <h2>資料如何處理與儲存</h2>
 <ul>
-  <li>DuDuClaw 是安裝在你自己電腦上的軟體。所有 Google 資料的讀取與處理都在你的裝置本機進行。</li>
-  <li>授權憑證（OAuth token）以 AES-256 加密後儲存在你裝置本機的設定目錄，不會上傳到 Dudu Technology Ltd. 或任何第三方伺服器。</li>
+  <li>DuDuClaw 是安裝在你自己電腦上的軟體。Google API 連線與憑證管理在你的裝置上執行；若你使用雲端 AI 服務，完成任務所需的 Google 資料可能依你的設定傳送至該服務。</li>
+  <li>授權憑證（OAuth token）以 AES-256 加密後儲存在你裝置本機的設定目錄，不會送到 Dudu Technology Ltd. 或你設定的 AI 服務供應商；執行你授權的操作時，憑證只會傳送至必要的 Google 服務。</li>
   <li>Dudu Technology Ltd. 無法存取你的 Google 資料。我們沒有伺服器端資料庫保存任何 Google 使用者資料。</li>
-  <li>你可以隨時在 DuDuClaw 儀表板按「中斷連線」撤銷授權，本機儲存的憑證會即刻刪除；也可以到 Google 帳戶的「安全性 → 第三方存取權」頁面撤銷。</li>
+  <li>你可以隨時在 DuDuClaw 儀表板按「中斷連線」；系統會立即刪除本機憑證，並在安全可行時嘗試向 Google 撤銷授權。網路逾時、平台限制、共用連線或狀態不明等情況可能使 Google 端撤銷未完成；完整確認或撤銷請到 Google 帳戶的「安全性 → 第三方存取權」頁面操作。</li>
 </ul>
 
+<h2>本機保存與刪除</h2>
+<p>依你啟用的功能與下達的指示，從 Google 取得的內容或其衍生資料，可能保存在你安裝 DuDuClaw 的裝置中，包括對話與摘要、記憶、知識庫／wiki、任務與工作狀態、Agent Mail、審批紀錄、工具與錯誤紀錄、CLI／AI runtime 紀錄、強化學習軌跡、稽核中繼資料，以及你建立的匯出檔或備份。</p>
+<p>「中斷連線」只會刪除 Google 憑證與未完成的連線流程，不會刪除先前已保存的內容。你可以在 DuDuClaw 儀表板刪除個別記憶與知識庫頁面；安裝管理員也可以使用經核准的「依來源忘記」功能，刪除可追溯至指定來源的記憶並阻止系統再次從相同來源學習。這項功能不會實體刪除原始對話文字、已傳送訊息、工具／錯誤紀錄、任務、Agent Mail、交接副本、CLI／AI runtime 紀錄、強化學習軌跡、共享 wiki 副本或備份；這些資料必須由安裝管理員依各自的保存位置與備份政策另行檢查及刪除。還原較早的備份可能使已刪除的資料重新出現。</p>
+<p>Dudu Technology Ltd. 無法遠端替你檢視或刪除自架裝置上的資料。若你需要刪除資料，請聯絡該 DuDuClaw 安裝的管理員。完整操作與限制請參閱 <a href="https://duduclaw.dudustudio.monster/docs/guides/memory-and-knowledge/" rel="noopener">記憶與知識庫指南</a>。</p>
+
 <h2>AI 功能與資料使用</h2>
-<p>你在 DuDuClaw 中指派 AI 員工處理的內容（例如「查我明天的行程」），相關 Google 資料會作為該次任務的上下文送交你自行設定的 AI 服務供應商（例如 Anthropic Claude）處理。送出範圍僅限完成該次任務所需，不用於訓練模型。</p>
+<p>你在 DuDuClaw 中指派 AI 員工處理的內容（例如「查我明天的行程」），完成該次任務所需的 Google 資料可能作為上下文送交你自行設定的 AI 服務供應商（例如 Anthropic Claude）處理。Dudu Technology Ltd. 與 DuDuClaw 不會使用 Google 資料建立、訓練或改善 AI／ML 模型。你只能設定其服務條款、帳戶方案與設定同樣禁止使用這些資料訓練或改善一般化 AI／ML 模型的供應商；若無法確認，請使用符合條件的本機模型，或不要啟用 Google 連線。DuDuClaw 無法自動驗證外部供應商的條款與帳戶設定，安裝管理員必須在連接前完成確認。</p>
 
 <h2>Limited Use 聲明</h2>
-<p>DuDuClaw 對 Google API 取得之資料的使用，遵守 <a href="https://developers.google.com/terms/api-services-user-data-policy" rel="noopener">Google API 服務使用者資料政策</a>，包括 Limited Use 要求。我們不會將 Google 使用者資料出售、用於廣告，或轉讓給第三方（法律要求除外）。</p>
+<p>DuDuClaw 對 Google API 取得之資料的使用，遵守 <a href="https://developers.google.com/terms/api-services-user-data-policy" rel="noopener">Google API 服務使用者資料政策</a>，包括 Limited Use 要求。我們不會將 Google 使用者資料出售或用於廣告。只有在你要求 AI 完成任務而必須交由你設定的 AI 服務供應商處理，或法律要求時，才會依本政策所述傳送相關資料。</p>
 
 <h2>聯絡方式</h2>
 <p>Dudu Technology Ltd.　<a href="mailto:info@dudustudio.monster">info@dudustudio.monster</a></p>
 
 <div class="en">
 <h2>DuDuClaw Privacy Policy</h2>
-<p class="meta">Last updated: 2026-07-26</p>
+<p class="meta">Last updated: 2026-10-26</p>
 
 <p>DuDuClaw is a locally-installed AI staff platform developed by Dudu Technology Ltd. This policy explains how DuDuClaw handles Google data you authorize it to access.</p>
 
 <h3>Google data we access</h3>
 <ul>
+  <li><strong>Gmail</strong> (gmail.readonly, gmail.compose): search and read message content, and create drafts at your request. DuDuClaw's built-in tools do not send email directly, but the Google <code>gmail.compose</code> permission itself includes sending capability.</li>
   <li><strong>Google Calendar</strong> (calendar.events): read upcoming events and create events (including Google Meet links) at your request.</li>
   <li><strong>Google Sheets</strong> (spreadsheets): read ranges you specify and append rows at your request.</li>
+  <li><strong>Google Drive</strong> (drive.readonly): search and read or export file content; this permission does not allow creating, modifying, or deleting Drive files.</li>
+  <li><strong>Google Docs</strong> (documents): read document content and append text to the end at your request.</li>
+  <li><strong>Google Slides</strong> (presentations.readonly): read-only access to text in presentations.</li>
+  <li><strong>Google Forms</strong> (forms.body.readonly, forms.responses.readonly): read-only access to form structure and existing responses.</li>
+  <li><strong>Google Tasks</strong> (tasks): read and create task items and mark them complete at your request.</li>
   <li><strong>Email address</strong> (userinfo.email): shown in the dashboard so you can confirm which account is connected.</li>
 </ul>
 
 <h3>How data is processed and stored</h3>
 <ul>
-  <li>DuDuClaw runs on your own computer. All Google data is read and processed locally on your device.</li>
-  <li>OAuth tokens are stored on your device, encrypted with AES-256. They are never uploaded to Dudu Technology Ltd. or any third party.</li>
+  <li>DuDuClaw runs on your own computer. Google API connections and credential management operate on your device; if you use a cloud AI service, Google data needed to complete a task may be sent to that service according to your configuration.</li>
+  <li>OAuth tokens are stored on your device, encrypted with AES-256. They are not sent to Dudu Technology Ltd. or your configured AI provider; when an authorized operation runs, a token is transmitted only to the Google services required for that operation.</li>
   <li>Dudu Technology Ltd. cannot access your Google data. We operate no server-side database holding any Google user data.</li>
-  <li>You can revoke access at any time via "Disconnect" in the DuDuClaw dashboard (locally stored tokens are deleted immediately) or from your Google Account's Security &rarr; Third-party access page.</li>
+  <li>You can select "Disconnect" at any time in the DuDuClaw dashboard. The system immediately deletes local credentials and attempts Google-side revocation when it is safe and possible. A network timeout, platform limitation, shared connection, or uncertain state may prevent that revocation from completing; use your Google Account's Security &rarr; Third-party access page to confirm or fully revoke access.</li>
 </ul>
 
+<h3>Local retention and deletion</h3>
+<p>Depending on the features you enable and the instructions you give, content obtained from Google or data derived from it may be retained on the device where DuDuClaw is installed. This can include conversations and summaries, memory, knowledge-base/wiki pages, tasks and working state, Agent Mail, approval records, tool and error records, CLI/AI runtime transcripts, reinforcement-learning trajectories, audit metadata, and exports or backups you create.</p>
+<p>Disconnecting removes Google credentials and pending connection attempts; it does not delete content that was already retained. You can delete individual memories and knowledge-base pages in the DuDuClaw dashboard. An installation administrator can also use the approved forget-by-source operation to delete memories traceable to a selected source and prevent relearning from that same source. That operation does not physically delete original conversation text, sent messages, tool/error records, tasks, Agent Mail, hand-off copies, CLI/AI runtime transcripts, reinforcement-learning trajectories, shared wiki copies, or backups. The installation administrator must review and delete those separately according to their storage locations and backup policy. Restoring an older backup can restore previously deleted data.</p>
+<p>Dudu Technology Ltd. cannot remotely inspect or delete data on your self-hosted device. Contact the administrator of that DuDuClaw installation for deletion requests. See the <a href="https://duduclaw.dudustudio.monster/docs/en/guides/memory-and-knowledge/" rel="noopener">Memory and knowledge base guide</a> for detailed controls and limitations.</p>
+
 <h3>AI features and data use</h3>
-<p>When you ask your AI staff to perform a task (e.g. "check tomorrow's schedule"), the Google data needed for that task is sent as context to the AI provider you configured yourself (e.g. Anthropic Claude). Only what the task requires is sent, and it is not used for model training.</p>
+<p>When you ask your AI staff to perform a task (e.g. "check tomorrow's schedule"), Google data needed to complete that task may be sent as context to the AI provider you configured (e.g. Anthropic Claude). Dudu Technology Ltd. and DuDuClaw do not use Google data to create, train, or improve AI/ML models. You may configure only a provider whose terms, account plan, and settings also prohibit using this data to train or improve a generalized AI/ML model. If you cannot confirm that restriction, use a compliant local model or do not enable the Google connection. DuDuClaw cannot automatically verify an external provider's terms or account settings; the installation administrator must confirm them before connecting.</p>
 
 <h3>Limited Use disclosure</h3>
-<p>DuDuClaw's use and transfer of information received from Google APIs adheres to the <a href="https://developers.google.com/terms/api-services-user-data-policy" rel="noopener">Google API Services User Data Policy</a>, including the Limited Use requirements. We do not sell Google user data, use it for advertising, or transfer it to third parties except as required by law.</p>
+<p>DuDuClaw's use and transfer of information received from Google APIs adheres to the <a href="https://developers.google.com/terms/api-services-user-data-policy" rel="noopener">Google API Services User Data Policy</a>, including the Limited Use requirements. We do not sell Google user data or use it for advertising. Relevant data is transferred only when processing by your configured AI provider is necessary to fulfill an AI task you requested, as described in this policy, or when required by law.</p>
 
 <h3>Contact</h3>
 <p>Dudu Technology Ltd. &mdash; <a href="mailto:info@dudustudio.monster">info@dudustudio.monster</a></p>
