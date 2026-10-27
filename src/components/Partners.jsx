@@ -1,6 +1,5 @@
 const Partners = () => (
   <section className="sect sect--compact" id="partners">
-    <p className="eyebrow rv">合作夥伴・台灣總經銷</p>
     <h2 className="rv">讓產品落地，有夥伴一起做</h2>
     <div className="partner-row rv">
       <div className="partner-nameplate">

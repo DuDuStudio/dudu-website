@@ -1,25 +1,24 @@
 import { useEffect } from 'react';
 
-/** Adds .is-in to every .rv element as it scrolls into view (once). */
+/** Content is visible at rest; motion only settles a newly entered section. */
 export function useReveal() {
   useEffect(() => {
-    const els = document.querySelectorAll('.rv');
-    if (!('IntersectionObserver' in window)) {
-      els.forEach((el) => el.classList.add('is-in'));
-      return;
-    }
-    const io = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((e) => {
-          if (e.isIntersecting) {
-            e.target.classList.add('is-in');
-            io.unobserve(e.target);
-          }
-        });
-      },
-      { threshold: 0.12 }
-    );
-    els.forEach((el) => io.observe(el));
-    return () => io.disconnect();
-  }, []);
+    if (!('IntersectionObserver' in window)) return;
+    const media=window.matchMedia('(prefers-reduced-motion: reduce)');
+    const animations=new Set();
+    const observer=new IntersectionObserver(entries=>{
+      entries.forEach(entry=>{
+        if(!entry.isIntersecting)return;
+        if(!media.matches&&entry.boundingClientRect.top>100){
+          const animation=entry.target.animate([{transform:'translateY(20px)'},{transform:'none'}],{duration:600,easing:'cubic-bezier(.16,1,.3,1)'});
+          animations.add(animation);animation.onfinish=()=>animations.delete(animation);
+        }
+        observer.unobserve(entry.target);
+      });
+    },{threshold:.1});
+    document.querySelectorAll('.rv').forEach(element=>observer.observe(element));
+    function stop(){if(media.matches)animations.forEach(animation=>animation.cancel());}
+    media.addEventListener('change',stop);
+    return()=>{observer.disconnect();media.removeEventListener('change',stop);animations.forEach(animation=>animation.cancel());};
+  },[]);
 }
