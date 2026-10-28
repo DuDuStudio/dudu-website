@@ -1,29 +1,17 @@
-import companyMark from '../assets/brand/company-mark.svg?raw';
-import companyMarkMono from '../assets/brand/company-mark-mono.svg?raw';
-import duduclawMark from '../assets/brand/duduclaw-mark.svg?raw';
-import vettalonMark from '../assets/brand/vettalon-mark.svg?raw';
-
-// C1 marks are inlined so CSS can recolor the ink layer (.ink) in dark mode.
 const MARKS = {
-  company: companyMark,
-  'company-mono': companyMarkMono,
-  duduclaw: duduclawMark,
-  vettalon: vettalonMark,
+  company: '/brand/company-mark.png',
+  duduclaw: '/brand/duduclaw-mark.png',
+  vettalon: '/brand/vettalon-mark.png',
 };
 
-const toDecorative = (svg) =>
-  svg.replace('<svg role="img" ', '<svg aria-hidden="true" focusable="false" ');
-
-const PREPARED = Object.fromEntries(
-  Object.entries(MARKS).map(([name, svg]) => [name, toDecorative(svg)])
-);
-
+// Use the delivered PNG artwork, including its transparent negative space.
 const BrandMark = ({ name, size = 32, className = '' }) => (
   <span
     className={`brand-mark ${className}`.trim()}
     style={{ width: size, height: size }}
-    dangerouslySetInnerHTML={{ __html: PREPARED[name] }}
-  />
+  >
+    <img src={MARKS[name]} alt="" width={size} height={size} />
+  </span>
 );
 
 export default BrandMark;

@@ -1,0 +1,116 @@
+{
+  "package": "Dudu Brand C1 Final",
+  "date": "2026-10-16",
+  "source_directory": "Dudu_Brand_C1_Final",
+  "source_manifest_sha256": "9358aa26f3c91935dd209fe2fe7507a769a39aa8ba7c5dd6f36d87683c55a964",
+  "sources": [
+    {
+      "path": "01_Logos/company/icon-color-native.png",
+      "sha256": "befbf8bd4bda9465581dc630a6f11c72a885cd619f0ea4cbcbc6e31b64437b48",
+      "previous_web_copy_identical": true
+    },
+    {
+      "path": "01_Logos/duduclaw/icon-color-native.png",
+      "sha256": "f846f509a30b3479e037776e0da7cbdfbab6882b0e8b29aee1b9e6041ed5dad1",
+      "previous_web_copy_identical": true
+    },
+    {
+      "path": "01_Logos/vettalon/icon-color-native.png",
+      "sha256": "d33a27d80986d53e5c8c42f24f086d75cf657f7b2f498f5db65b9ac92b391389",
+      "previous_web_copy_identical": true
+    }
+  ],
+  "exports": {
+    "tool": "sharp 0.35.5",
+    "color_crop_bounds": {
+      "company": [
+        89,
+        39,
+        1053,
+        1188
+      ],
+      "duduclaw": [
+        47,
+        69,
+        1183,
+        1169
+      ],
+      "vettalon": [
+        33,
+        119,
+        1167,
+        925
+      ]
+    },
+    "brand_canvas": {
+      "content_box": 480,
+      "padding": 16,
+      "width": 512,
+      "height": 512,
+      "fit": "contain",
+      "background": "transparent"
+    },
+    "ico_sizes": [
+      16,
+      24,
+      32,
+      48,
+      64,
+      128,
+      256
+    ],
+    "notes": "All marks use original color PNGs in every theme. No tracing, redrawing, color filters, white or monochrome substitutions, or opaque avatar/app-icon artwork is used. OG template uses the same color brand PNGs."
+  },
+  "outputs": [
+    {
+      "path": "public/brand/company-mark.png",
+      "sha256": "a84b4166f629ec86b6035cfbc71831d072a896094416081f9f2befb632528167",
+      "identical_to_previous_export": true
+    },
+    {
+      "path": "public/brand/duduclaw-mark.png",
+      "sha256": "38e3b78545fd143cb687c6bbd1ff1f14e3c2a961fdc59e02f5ba2cbf214b1f2e",
+      "identical_to_previous_export": true
+    },
+    {
+      "path": "public/brand/vettalon-mark.png",
+      "sha256": "86a8230ab68e1379d180ac4b58706ce73495124973c530cadb4c7897f9714dbc",
+      "identical_to_previous_export": true
+    },
+    {
+      "path": "public/favicon-32.png",
+      "sha256": "f38e8d8fde1f9fa423364e088b84cf1f62babf84024611908b9fe3c74d719bae",
+      "identical_to_previous_export": true
+    },
+    {
+      "path": "public/favicon-48.png",
+      "sha256": "f31af2e5b132e81a4f51cbd9f16880b44049ff3062390d96c49eb0c3fd588974",
+      "identical_to_previous_export": true
+    },
+    {
+      "path": "public/apple-touch-icon.png",
+      "sha256": "796642de5f82cb2f6bd61bcc1a20d2e98b192d3a10a8ee265630844148589ec8",
+      "identical_to_previous_export": true
+    },
+    {
+      "path": "public/icon-192.png",
+      "sha256": "d5c24e8583746c0091e628a7e7e23b5ff6b852aec0a6f490919cebe67dc604f1",
+      "identical_to_previous_export": true
+    },
+    {
+      "path": "public/icon-512.png",
+      "sha256": "a84b4166f629ec86b6035cfbc71831d072a896094416081f9f2befb632528167",
+      "identical_to_previous_export": true
+    },
+    {
+      "path": "public/company-mark-512.png",
+      "sha256": "a84b4166f629ec86b6035cfbc71831d072a896094416081f9f2befb632528167",
+      "identical_to_previous_export": true
+    },
+    {
+      "path": "public/favicon.ico",
+      "sha256": "bb74d34a69e34b65a69d11f589da56d45f149584a48cdc59b61bfac0396389f6",
+      "identical_to_previous_export": true
+    }
+  ]
+}

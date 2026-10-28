@@ -22,7 +22,6 @@
   --text: var(--navy);
   --text-muted: #5B6470;
   --rule: #D4D7D8;
-  --logo-ink: var(--navy);
   --shadow: 0 1px 2px rgba(16, 43, 72, .06);
 
   /* company accent (decorative) + per-product accents */
@@ -52,7 +51,6 @@
     --text: #F5F4F0;
     --text-muted: #B7BDC4;
     --rule: #24405F;
-    --logo-ink: var(--cream);
     --shadow: none;
     --accent-text: #B7BDC4;
     --duduclaw-text: #E0A54F;
@@ -101,10 +99,7 @@ a { color: inherit; }
 
 /* ── brand marks ── */
 .brand-mark { display: inline-block; flex-shrink: 0; line-height: 0; }
-.brand-mark svg { width: 100%; height: 100%; display: block; }
-.brand-mark .ink { fill: var(--logo-ink); }
-.footer__mark { color: var(--text-muted); }
-.footer__mark .ink { fill: currentColor; }
+.brand-mark img { width: 100%; height: 100%; display: block; object-fit: contain; }
 
 /* ── reveal: opacity/translate only, gated on motion preference ── */
 .rv { opacity: 1; }
