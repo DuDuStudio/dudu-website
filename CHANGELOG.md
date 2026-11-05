@@ -3,6 +3,7 @@
 ## Unreleased
 
 ### Changed
+- DuDuClaw Google 資料隱私頁補上 v1.80.0 起可能要求的權限：Google Chat 唯讀（chat.spaces.readonly、chat.messages.readonly），以及 Meet 錄影匯入用的 meetings.space.readonly 與 drive.file；中英文同步，最後更新日改為 2026-11-06。
 - 全站改用 C1 視覺識別：米白／海軍藍配色、銀灰公司輔色、DuDuClaw 琥珀與 Vettalon 藍綠產品色、4px 色條、Nunito Sans／Avenir Next 字型；首頁、隱私權政策、服務條款與 DuDuClaw Google 資料隱私頁一併更新，深色模式跟隨系統設定。
 - 公司標誌換成 C1 標誌（導覽列、產品區、頁尾、法務頁、favicon、apple-touch-icon、JSON-LD logo）；導覽列與首頁標語的公司名稱改為 Dudu Technology Ltd.／嘟嘟數位科技有限公司。
 - 產品區分成兩條產品線呈現，DuDuClaw 與 DuDuClaw OS 共用 DuDuClaw 標誌，Vettalon 使用自己的標誌。
