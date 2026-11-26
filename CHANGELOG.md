@@ -3,6 +3,7 @@
 ## Unreleased
 
 ### Changed
+- DuDuClaw Google 資料隱私頁跟上 v1.85.0：日曆可編輯既有行程，並在每次確認後刪除行程（預設不寄通知信）；試算表可更新儲存格與建立新試算表；文件可取代文字與建立新文件；Gmail 可在既有討論串建立回覆草稿，並在每次確認後寄出既有草稿。這些都沿用原本的權限範圍。新增 Google Chat 傳送（chat.messages.create）：管理員開啟、本人另外授權後，每則訊息經本人確認才以本人帳號傳送。另補上原本漏列的 calendar.calendarlist.readonly，以及公司層級授權（服務帳號網域委派）由 Workspace 管理員核准、不經個人同意畫面的說明，v1.85.0 起公司層級授權可另外開啟 Google Chat 唯讀與 Google Chat 傳送。中英文同步，最後更新日改為 2026-11-25。
 - DuDuClaw Google 資料隱私頁補上 v1.80.0 起可能要求的權限：Google Chat 唯讀（chat.spaces.readonly、chat.messages.readonly），以及 Meet 錄影匯入用的 meetings.space.readonly 與 drive.file；中英文同步，最後更新日改為 2026-11-06。
 - 全站改用 C1 視覺識別：米白／海軍藍配色、銀灰公司輔色、DuDuClaw 琥珀與 Vettalon 藍綠產品色、4px 色條、Nunito Sans／Avenir Next 字型；首頁、隱私權政策、服務條款與 DuDuClaw Google 資料隱私頁一併更新，深色模式跟隨系統設定。
 - 公司標誌換成 C1 標誌（導覽列、產品區、頁尾、法務頁、favicon、apple-touch-icon、JSON-LD logo）；導覽列與首頁標語的公司名稱改為 Dudu Technology Ltd.／嘟嘟數位科技有限公司。
