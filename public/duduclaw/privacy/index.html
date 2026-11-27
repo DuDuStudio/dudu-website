@@ -41,25 +41,27 @@
 <a class="skip-link" href="#main">跳到主要內容</a>
 <main id="main" tabindex="-1">
 <h1>DuDuClaw 隱私權政策</h1>
-<p class="meta">最後更新：2026-11-06</p>
+<p class="meta">最後更新：2026-11-25</p>
 
 <p>DuDuClaw 是Dudu Technology Ltd.（嘟嘟數位科技有限公司）開發的本地端 AI 員工平台。本政策說明 DuDuClaw 如何處理你授權存取的 Google 資料。</p>
 
 <h2>我們取用哪些 Google 資料</h2>
 <p>當你在 DuDuClaw 儀表板連接 Google 帳戶時，依你授權的範圍，DuDuClaw 可存取：</p>
 <ul>
-  <li><strong>Gmail</strong>（gmail.readonly、gmail.compose）：搜尋與讀取郵件內容，並依你的指示建立草稿。DuDuClaw 內建工具不會直接寄送郵件，但 Google 的 <code>gmail.compose</code> 權限本身包含寄送能力。</li>
-  <li><strong>Google 日曆</strong>（calendar.events）：讀取近期行程、依你的指示建立行程（含 Google Meet 會議連結）。</li>
-  <li><strong>Google 試算表</strong>（spreadsheets）：讀取你指定的試算表範圍、依你的指示新增資料列。</li>
-  <li><strong>Google 雲端硬碟</strong>（drive.readonly）：搜尋及讀取或匯出檔案內容；此權限不允許建立、修改或刪除雲端硬碟檔案。</li>
-  <li><strong>Google 文件</strong>（documents）：讀取文件內容，並依你的指示在文件結尾附加文字。</li>
+  <li><strong>Gmail</strong>（gmail.readonly、gmail.compose）：搜尋與讀取郵件內容，依你的指示建立草稿或在既有郵件討論串建立回覆草稿，並在每次確認卡核准後寄出既有的草稿。DuDuClaw 不會跳過確認直接寄出郵件；Google 的 <code>gmail.compose</code> 權限本身包含寄送能力。</li>
+  <li><strong>Google 日曆</strong>（calendar.events、calendar.calendarlist.readonly）：列出你的日曆、讀取近期行程、依你的指示建立行程（含 Google Meet 會議連結）與編輯既有行程，並在每次確認卡核准後刪除行程。編輯或刪除行程可能變更與會者的行事曆，DuDuClaw 預設不寄通知信給與會者。</li>
+  <li><strong>Google 試算表</strong>（spreadsheets）：讀取你指定的試算表範圍，並依你的指示新增資料列、更新儲存格，或在你的雲端硬碟根目錄建立新的試算表。</li>
+  <li><strong>Google 雲端硬碟</strong>（drive.readonly）：搜尋及讀取或匯出檔案內容；此權限不允許建立、修改或刪除雲端硬碟檔案。DuDuClaw 建立新的文件或試算表時，使用的是 Google 文件與試算表各自的權限。</li>
+  <li><strong>Google 文件</strong>（documents）：讀取文件內容，並依你的指示在文件結尾附加文字、取代文件中的文字，或在你的雲端硬碟根目錄建立新文件。</li>
   <li><strong>Google 簡報</strong>（presentations.readonly）：唯讀存取簡報中的文字內容。</li>
   <li><strong>Google 表單</strong>（forms.body.readonly、forms.responses.readonly）：唯讀存取表單題目結構與既有回覆。</li>
   <li><strong>Google Tasks</strong>（tasks）：讀取與建立待辦事項，並依你的指示標記完成。</li>
   <li><strong>Google Chat</strong>（chat.spaces.readonly、chat.messages.readonly）：管理員開啟 Google Chat 讀取、且你另外同意後，唯讀查看你所在的聊天室與近期訊息。DuDuClaw 不會用這兩個權限傳送訊息，也不下載附件。</li>
   <li><strong>Google Meet 錄影匯入</strong>（meetings.space.readonly、drive.file）：你在「我的連線」開啟會議錄影存取後，列出你的近期會議與錄影參照，並讀取你在 Google Picker 選取或已分享給 DuDuClaw 的錄影檔，用來產生逐字稿。<code>drive.file</code> 權限本身也允許建立與修改這些檔案，但本功能只讀取。</li>
+  <li><strong>Google Chat 傳送</strong>（chat.messages.create）：組織管理員開啟這項功能、你在「我的連線」另外授權後，依你的要求以你的帳號把文字訊息傳到既有的聊天室或討論串。每一則都要你本人確認後才送出；Google 會顯示你是寄件者，並附上應用程式名稱。</li>
   <li><strong>電子郵件地址</strong>（userinfo.email）：在儀表板顯示目前連接的帳戶。</li>
 </ul>
+<p>你的組織也可能由 Google Workspace 管理員以服務帳號網域委派（公司層級授權）授權 DuDuClaw。這種授權由 Workspace 管理員在 Google 管理控制台核准，不經過你個人的同意畫面。這種授權涵蓋上面列的 Gmail、日曆、試算表、雲端硬碟、文件、簡報、表單與 Tasks，用途與上面相同；DuDuClaw v1.85.0 起每次只要求工具所屬服務的權限。管理員另外開啟 Google Chat 讀取後，公司層級授權也包含 chat.spaces.readonly 與 chat.messages.readonly，只用來唯讀查看聊天室與近期訊息；另外開啟 Google Chat 傳送後，也包含 chat.messages.create，只用來在你每次確認後以你的帳號傳送文字訊息。</p>
 
 <h2>資料如何處理與儲存</h2>
 <ul>
@@ -86,24 +88,26 @@
 
 <div class="en">
 <h2>DuDuClaw Privacy Policy</h2>
-<p class="meta">Last updated: 2026-11-06</p>
+<p class="meta">Last updated: 2026-11-25</p>
 
 <p>DuDuClaw is a locally-installed AI staff platform developed by Dudu Technology Ltd. This policy explains how DuDuClaw handles Google data you authorize it to access.</p>
 
 <h3>Google data we access</h3>
 <ul>
-  <li><strong>Gmail</strong> (gmail.readonly, gmail.compose): search and read message content, and create drafts at your request. DuDuClaw's built-in tools do not send email directly, but the Google <code>gmail.compose</code> permission itself includes sending capability.</li>
-  <li><strong>Google Calendar</strong> (calendar.events): read upcoming events and create events (including Google Meet links) at your request.</li>
-  <li><strong>Google Sheets</strong> (spreadsheets): read ranges you specify and append rows at your request.</li>
-  <li><strong>Google Drive</strong> (drive.readonly): search and read or export file content; this permission does not allow creating, modifying, or deleting Drive files.</li>
-  <li><strong>Google Docs</strong> (documents): read document content and append text to the end at your request.</li>
+  <li><strong>Gmail</strong> (gmail.readonly, gmail.compose): search and read message content, create drafts or reply drafts in an existing thread at your request, and send an existing draft only after a confirmation card is approved each time. DuDuClaw does not send email without that confirmation; the Google <code>gmail.compose</code> permission itself includes sending capability.</li>
+  <li><strong>Google Calendar</strong> (calendar.events, calendar.calendarlist.readonly): list your calendars, read upcoming events, create events (including Google Meet links) or edit existing events at your request, and delete an event only after a confirmation card is approved each time. Editing or deleting an event can change attendees' calendars; DuDuClaw does not send attendees a notification email by default.</li>
+  <li><strong>Google Sheets</strong> (spreadsheets): read ranges you specify, and at your request append rows, update cells, or create a new spreadsheet in the root of your Drive.</li>
+  <li><strong>Google Drive</strong> (drive.readonly): search and read or export file content; this permission does not allow creating, modifying, or deleting Drive files. When DuDuClaw creates a new document or spreadsheet, it uses the Google Docs or Google Sheets permission.</li>
+  <li><strong>Google Docs</strong> (documents): read document content, and at your request append text to the end, replace text in a document, or create a new document in the root of your Drive.</li>
   <li><strong>Google Slides</strong> (presentations.readonly): read-only access to text in presentations.</li>
   <li><strong>Google Forms</strong> (forms.body.readonly, forms.responses.readonly): read-only access to form structure and existing responses.</li>
   <li><strong>Google Tasks</strong> (tasks): read and create task items and mark them complete at your request.</li>
   <li><strong>Google Chat</strong> (chat.spaces.readonly, chat.messages.readonly): when an administrator turns on Google Chat read and you consent separately, read-only access to the spaces you belong to and their recent messages. DuDuClaw does not use these permissions to send messages and does not download attachments.</li>
   <li><strong>Google Meet recording import</strong> (meetings.space.readonly, drive.file): after you turn on meeting recording access in My connections, list your recent meetings and their recording references, and read the recording files you pick in Google Picker or have already shared with DuDuClaw, to produce transcripts. The <code>drive.file</code> permission itself also allows creating and modifying those files, but this feature only reads them.</li>
+  <li><strong>Google Chat send</strong> (chat.messages.create): after your organization's administrator turns the feature on and you authorize it separately in My connections, post text messages to an existing space or thread with your account at your request. Each message is sent only after you confirm it yourself; Google shows you as the sender with the app's name attached.</li>
   <li><strong>Email address</strong> (userinfo.email): shown in the dashboard so you can confirm which account is connected.</li>
 </ul>
+<p>Your organization may instead authorize DuDuClaw through a Google Workspace administrator with service account domain-wide delegation (company-level authorization). That authorization is approved by the Workspace administrator in the Google Admin console and does not go through your personal consent screen. It covers the Gmail, Calendar, Sheets, Drive, Docs, Slides, Forms and Tasks access listed above, for the same purposes; from DuDuClaw v1.85.0 each request asks only for the scopes of the service the tool belongs to. When an administrator also turns on Google Chat read, company-level authorization includes chat.spaces.readonly and chat.messages.readonly, used only to read spaces and recent messages; when Google Chat send is turned on, it also includes chat.messages.create, used only to send text messages with your account after you confirm each one.</p>
 
 <h3>How data is processed and stored</h3>
 <ul>
